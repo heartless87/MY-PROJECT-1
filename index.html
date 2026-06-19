@@ -17,21 +17,44 @@
         }
         header {
             display: flex;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0 2rem;
+            align-items: center;
             width: 100%;
             min-height: 70px;
             background-color: #f7f7f7;
-            align-items: center;
+            margin: 0;
+            padding: 0 2rem;
             justify-content: space-between;
+            box-sizing: border-box;
         }
-        h1 {
-            color: #4ddf21;
+        .divider{
+            margin: 0 4px;
         }
-        img{
-            height: 20px;
-            width: 20px;
+        .header-right{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .icon-btn{
+            width: clamp(36px, 4vw, 44px);
+            height: clamp(36px, 4vw, 44px);
+            border-radius: 50%;
+            background-color: #f4e3cf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .icon-btn img{
+            width: 55%;
+            height: 55%;
+            object-fit: contain;
+        }
+        .search-bar{ display: none; }
+        .search-mobile{ display: flex; }
+        @media (min-width: 1024px) {
+            .search-bar{ display: block; }
+            .search-mobile{ display: none;}
         }
     </style>
 </head>
@@ -42,11 +65,18 @@
         <h6>X</h6>
     </div>
     <header>
-        <img src="" alt="Logo Place">
-        <img src="stock/search_icon.png" alt="">
-        <img src="stock/heart.png" alt="">
-        <img src="stock/shopping-bag.png" alt="">
-        <img src="stock/user.png" alt="">
+        <a class="logo" href="/">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <div class="header-right">
+            <form class="search-bar">
+                <input type="search" placeholder="Search Products" id="">
+            </form>
+            <span class="divider">|</span>
+            <a href="#" class="icon-btn search-mobile"><img src="stock/search_icon.png" alt="Search"></a>
+            <a href="#"class="icon-btn wishlist"><img src="stock/heart.png" alt="Wishlist"></a>
+            <a href="#"class="icon-btn profile"><img src="stock/user.png" alt="Profile"></a>
+        </div>
     </header>
 </body>
 </html>
