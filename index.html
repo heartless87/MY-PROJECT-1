@@ -127,9 +127,22 @@
             margin-top: 2px;
             color: #0f044c;
         }
+        .search-btn span {
+            color: #ffffff;
+            background: transparent;
+        }
+        .search-btn-background{
+            background-color: #0f044c;
+            border-radius: 50%;
+            width: clamp(24px, 6vw, 34px);
+            height: clamp(24px, 6vw, 34px);
+            padding: 20px;
+            margin-bottom: 26px;
+        }
         .search-btn img{
             width: clamp(24px, 6vw, 34px);
             height: clamp(24px, 6vw, 34px);
+            filter: invert(1); 
         }
         @media (min-width: 1024px) {
             .bottom-navbar { display: none; }
