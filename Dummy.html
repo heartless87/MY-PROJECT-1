@@ -1,0 +1,3146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VELUX — Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=Geist:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Inter:wght@100;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=PT+Serif:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Shantell+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style id="tokens">
+        :root {
+          --background: #fafaf8;
+          --foreground: #111110;
+          --border: rgba(0, 0, 0, 0.08);
+          --input: #f4f3ef;
+          --primary: #111110;
+          --primary-foreground: #ffffff;
+          --secondary: #f2f1ec;
+          --secondary-foreground: #58574f;
+          --muted: #e8e7e0;
+          --muted-foreground: #8e8d84;
+          --success: #e6f4ee;
+          --success-foreground: #1c7a3e;
+          --accent: #c9a96e;
+          --accent-foreground: #ffffff;
+          --destructive: #fef0ef;
+          --destructive-foreground: #c0392b;
+          --warning: #fef8e7;
+          --warning-foreground: #8a5e08;
+          --card: #ffffff;
+          --card-foreground: #111110;
+          --sidebar: #111110;
+          --sidebar-foreground: #9a9990;
+          --sidebar-primary: #c9a96e;
+          --sidebar-primary-foreground: #ffffff;
+          --radius-sm: 3px;
+          --radius-md: 8px;
+          --radius-lg: 12px;
+          --radius-xl: 20px;
+          --font-family-body: "Inter", system-ui, sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+<style id="base">
+        .export-wrapper {
+          background: var(--background);
+          color: var(--foreground);
+          font-family: var(--font-family-body);
+          font-size: 14px;
+          min-height: 812px;
+          overflow-x: hidden;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        img {
+          display: block;
+        }
+      </style>
+<style id="topbar-styles">
+        #topbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 16px;
+          height: 56px;
+          background: var(--background);
+          border-bottom: 1px solid var(--border);
+          position: relative;
+          z-index: 100;
+        }
+        #topbar-logo {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        #topbar-logo-mark {
+          width: 30px;
+          height: 30px;
+          background: var(--foreground);
+          border-radius: 7px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        #topbar-logo-text {
+          font-size: 16px;
+          font-weight: 800;
+          letter-spacing: 0.24em;
+          color: var(--foreground);
+          text-transform: uppercase;
+        }
+        #topbar-right {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        .topbar-icon-btn {
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          cursor: pointer;
+          position: relative;
+        }
+        .topbar-cart-badge {
+          position: absolute;
+          top: 3px;
+          right: 3px;
+          width: 14px;
+          height: 14px;
+          background: var(--accent);
+          color: #fff;
+          border-radius: 50%;
+          font-size: 7px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
+<style id="announce-styles">
+        #announce-bar {
+          background: var(--foreground);
+          padding: 9px 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+        }
+        #announce-dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: var(--accent);
+          flex-shrink: 0;
+        }
+        #announce-text {
+          font-size: 10px;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.8);
+          letter-spacing: 0.06em;
+          white-space: nowrap;
+        }
+        #announce-accent {
+          font-size: 10px;
+          font-weight: 700;
+          color: var(--accent);
+          white-space: nowrap;
+        }
+      </style>
+<style id="hero-styles">
+        #hero {
+          position: relative;
+          overflow: hidden;
+          background: var(--foreground);
+        }
+        #hero-img {
+          width: 100%;
+          aspect-ratio: 3/4;
+          object-fit: cover;
+          opacity: 0.65;
+          display: block;
+        }
+        #hero-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(5, 5, 4, 0.95) 0%,
+            rgba(5, 5, 4, 0.4) 45%,
+            rgba(5, 5, 4, 0.1) 75%,
+            transparent 100%
+          );
+        }
+        #hero-content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 20px 20px 24px;
+        }
+        #hero-pill-row {
+          display: flex;
+          gap: 6px;
+          margin-bottom: 14px;
+        }
+        .h-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          padding: 5px 11px;
+          border-radius: 100px;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .h-pill-glass {
+          background: rgba(255, 255, 255, 0.12);
+          color: rgba(255, 255, 255, 0.85);
+        }
+        .h-pill-gold {
+          background: rgba(201, 169, 110, 0.22);
+          color: var(--accent);
+        }
+        #hero-title {
+          font-size: 44px;
+          font-weight: 800;
+          line-height: 0.93;
+          letter-spacing: -0.045em;
+          color: #fff;
+          margin-bottom: 10px;
+        }
+        #hero-title .italic {
+          font-style: italic;
+          font-weight: 200;
+          color: rgba(255, 255, 255, 0.7);
+        }
+        #hero-title .gold {
+          color: var(--accent);
+        }
+        #hero-desc {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.55);
+          line-height: 1.7;
+          margin-bottom: 18px;
+          max-width: 300px;
+        }
+        #hero-search-box {
+          background: rgba(255, 255, 255, 0.09);
+          backdrop-filter: blur(24px);
+          border-radius: var(--radius-lg);
+          padding: 10px 12px;
+          margin-bottom: 16px;
+        }
+        #hsb-label {
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.35);
+          margin-bottom: 7px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        #hsb-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        #hsb-input {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+        }
+        #hsb-placeholder {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.35);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        #hsb-btn {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          background: var(--accent);
+          color: #fff;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          padding: 9px 14px;
+          border-radius: var(--radius-md);
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        #hsb-chips {
+          display: flex;
+          gap: 5px;
+          margin-top: 8px;
+          overflow-x: auto;
+        }
+        #hsb-chips::-webkit-scrollbar {
+          display: none;
+        }
+        .hsb-chip {
+          padding: 4px 10px;
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 100px;
+          font-size: 9px;
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 500;
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        #hero-stats-row {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          background: rgba(255, 255, 255, 0.06);
+          border-radius: var(--radius-md);
+          overflow: hidden;
+        }
+        .hs {
+          padding: 9px 4px;
+          text-align: center;
+          border-right: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        .hs:last-child {
+          border-right: none;
+        }
+        .hs-num {
+          font-size: 14px;
+          font-weight: 800;
+          color: #fff;
+          letter-spacing: -0.02em;
+          line-height: 1;
+          margin-bottom: 2px;
+        }
+        .hs-lbl {
+          font-size: 8px;
+          color: rgba(255, 255, 255, 0.35);
+          font-weight: 500;
+        }
+
+        /* Float badges */
+        #hf-left {
+          position: absolute;
+          top: 20px;
+          left: 16px;
+          background: rgba(255, 255, 255, 0.93);
+          backdrop-filter: blur(16px);
+          border-radius: 100px;
+          padding: 7px 12px;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          z-index: 20;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+        }
+        .hfl-av {
+          width: 19px;
+          height: 19px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 1.5px solid #fff;
+          margin-right: -5px;
+          flex-shrink: 0;
+        }
+        .hfl-av img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        #hfl-text {
+          font-size: 10px;
+          font-weight: 700;
+          color: var(--foreground);
+          margin-left: 7px;
+          white-space: nowrap;
+        }
+        #hfl-sub {
+          font-size: 8px;
+          color: var(--muted-foreground);
+          white-space: nowrap;
+        }
+
+        #hf-right {
+          position: absolute;
+          top: 20px;
+          right: 16px;
+          background: rgba(255, 255, 255, 0.93);
+          backdrop-filter: blur(16px);
+          border-radius: var(--radius-lg);
+          padding: 9px 12px;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          z-index: 20;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+        }
+        #hfr-icon {
+          width: 26px;
+          height: 26px;
+          background: var(--success);
+          border-radius: var(--radius-sm);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        #hfr-title {
+          font-size: 10px;
+          font-weight: 700;
+          color: var(--foreground);
+        }
+        #hfr-sub {
+          font-size: 8px;
+          color: var(--muted-foreground);
+          margin-top: 1px;
+        }
+      </style>
+<style id="ticker-styles">
+        #ticker {
+          background: var(--foreground);
+          padding: 10px 16px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          overflow-x: auto;
+        }
+        #ticker::-webkit-scrollbar {
+          display: none;
+        }
+        .tick-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          flex-shrink: 0;
+        }
+        .tick-icon {
+          width: 22px;
+          height: 22px;
+          background: rgba(201, 169, 110, 0.16);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .tick-title {
+          font-size: 10px;
+          font-weight: 600;
+          color: #fff;
+          white-space: nowrap;
+        }
+        .tick-sub {
+          font-size: 9px;
+          color: rgba(255, 255, 255, 0.38);
+          white-space: nowrap;
+        }
+        .tick-sep {
+          width: 1px;
+          height: 14px;
+          background: rgba(255, 255, 255, 0.1);
+          flex-shrink: 0;
+        }
+      </style>
+<style id="brands-styles">
+        #brands-wrap {
+          background: var(--secondary);
+          padding: 14px 20px;
+          display: flex;
+          align-items: center;
+          gap: 0;
+          overflow-x: auto;
+        }
+        #brands-wrap::-webkit-scrollbar {
+          display: none;
+        }
+        #brands-lbl {
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--muted-foreground);
+          white-space: nowrap;
+          flex-shrink: 0;
+          margin-right: 16px;
+          padding-right: 16px;
+          border-right: 1px solid var(--border);
+        }
+        .brand-nm {
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.13em;
+          text-transform: uppercase;
+          color: var(--foreground);
+          opacity: 0.18;
+          white-space: nowrap;
+          flex-shrink: 0;
+          margin-right: 26px;
+        }
+      </style>
+<style id="categories-styles">
+        #categories-section {
+          padding: 28px 0 24px;
+          background: var(--background);
+        }
+        .sec-eyebrow {
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.24em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 4px;
+        }
+        .sec-title {
+          font-size: 24px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.03em;
+          line-height: 1.1;
+        }
+        .sec-title .thin {
+          font-weight: 200;
+          font-style: italic;
+        }
+        .sec-header {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          padding: 0 20px;
+          margin-bottom: 16px;
+        }
+        .view-all-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 10px;
+          font-weight: 600;
+          color: var(--secondary-foreground);
+          cursor: pointer;
+          white-space: nowrap;
+          padding: 6px 12px;
+          border-radius: 100px;
+          background: var(--secondary);
+        }
+
+        /* Categories horizontal scroll */
+        #cat-scroll {
+          display: flex;
+          gap: 10px;
+          padding: 0 20px;
+          overflow-x: auto;
+        }
+        #cat-scroll::-webkit-scrollbar {
+          display: none;
+        }
+        .cat-card {
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          position: relative;
+          cursor: pointer;
+          flex-shrink: 0;
+          width: 140px;
+          height: 190px;
+        }
+        .cat-card.wide {
+          width: 200px;
+        }
+        .cat-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .cat-ov {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.75) 0%,
+            transparent 55%
+          );
+        }
+        .cat-info {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 12px 12px;
+        }
+        .cat-micro {
+          font-size: 7px;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 2px;
+        }
+        .cat-name {
+          font-size: 13px;
+          font-weight: 700;
+          color: #fff;
+        }
+        .cat-count {
+          font-size: 9px;
+          color: rgba(255, 255, 255, 0.5);
+          margin-top: 1px;
+        }
+        .cat-arr {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          width: 24px;
+          height: 24px;
+          background: rgba(255, 255, 255, 0.14);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
+<style id="products-styles">
+        #products-section {
+          background: var(--secondary);
+          padding: 28px 0 24px;
+        }
+        #prod-tabs-wrap {
+          padding: 0 20px;
+          margin-bottom: 16px;
+          overflow-x: auto;
+        }
+        #prod-tabs-wrap::-webkit-scrollbar {
+          display: none;
+        }
+        #prod-tabs-inner {
+          display: inline-flex;
+          gap: 2px;
+          background: var(--muted);
+          border-radius: 100px;
+          padding: 4px;
+        }
+        .prod-tab {
+          padding: 6px 14px;
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          color: var(--muted-foreground);
+          cursor: pointer;
+          border-radius: 100px;
+          white-space: nowrap;
+        }
+        .prod-tab.active {
+          background: var(--foreground);
+          color: #fff;
+        }
+        #prod-scroll {
+          display: flex;
+          gap: 10px;
+          padding: 0 20px;
+          overflow-x: auto;
+        }
+        #prod-scroll::-webkit-scrollbar {
+          display: none;
+        }
+        .prod-card {
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          width: 152px;
+        }
+        .prod-img {
+          position: relative;
+          aspect-ratio: 3/4;
+          overflow: hidden;
+          background: var(--muted);
+        }
+        .prod-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .prod-bdg {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          padding: 3px 7px;
+          border-radius: 100px;
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        .pb-new {
+          background: var(--foreground);
+          color: #fff;
+        }
+        .pb-sale {
+          background: #fef0ef;
+          color: #c0392b;
+        }
+        .pb-lim {
+          background: rgba(201, 169, 110, 0.15);
+          color: var(--accent);
+        }
+        .prod-wish {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          width: 25px;
+          height: 25px;
+          background: rgba(255, 255, 255, 0.9);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .prod-body {
+          padding: 10px 10px 6px;
+          flex: 1;
+        }
+        .prod-brand {
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: var(--muted-foreground);
+          margin-bottom: 2px;
+        }
+        .prod-name {
+          font-size: 11px;
+          font-weight: 500;
+          color: var(--foreground);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-bottom: 4px;
+        }
+        .prod-stars {
+          display: flex;
+          gap: 1px;
+          margin-bottom: 4px;
+        }
+        .prod-price {
+          font-size: 13px;
+          font-weight: 800;
+          color: var(--foreground);
+        }
+        .prod-old {
+          font-size: 10px;
+          color: var(--muted-foreground);
+          text-decoration: line-through;
+        }
+        .prod-add-btn {
+          margin: 0 10px 10px;
+          padding: 8px;
+          background: var(--foreground);
+          color: #fff;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          border-radius: var(--radius-sm);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+        }
+      </style>
+<style id="editorial-styles">
+        #editorial-section {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+        .ed-block {
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+        }
+        .ed-block img {
+          width: 100%;
+          display: block;
+        }
+        .ed-ov {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.05) 55%
+          );
+        }
+        .ed-cnt {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 20px 20px;
+        }
+        .ed-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          background: var(--accent);
+          color: #fff;
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          padding: 4px 10px;
+          border-radius: 100px;
+          margin-bottom: 8px;
+        }
+        .ed-title {
+          font-size: 26px;
+          font-weight: 800;
+          color: #fff;
+          letter-spacing: -0.025em;
+          line-height: 1.1;
+          margin-bottom: 8px;
+        }
+        .ed-desc {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.58);
+          line-height: 1.6;
+          margin-bottom: 14px;
+        }
+        .ed-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 10px 20px;
+          background: #fff;
+          color: var(--foreground);
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          border-radius: var(--radius-sm);
+          cursor: pointer;
+          white-space: nowrap;
+        }
+        .ed-btn.gold {
+          background: var(--accent);
+          color: #fff;
+        }
+        .ed-sale-bubble {
+          position: absolute;
+          top: 14px;
+          right: 14px;
+          width: 58px;
+          height: 58px;
+          border-radius: 50%;
+          background: var(--accent);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+        }
+        .ed-sb-num {
+          font-size: 20px;
+          font-weight: 800;
+          color: #fff;
+          line-height: 1;
+        }
+        .ed-sb-off {
+          font-size: 8px;
+          font-weight: 700;
+          color: rgba(255, 255, 255, 0.7);
+        }
+        #ed-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3px;
+        }
+        .ed-half {
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+        }
+        .ed-half img {
+          width: 100%;
+          height: 190px;
+          object-fit: cover;
+          display: block;
+        }
+      </style>
+<style id="ai-styles">
+        #ai-section {
+          background: var(--foreground);
+          padding: 28px 20px 32px;
+          position: relative;
+          overflow: hidden;
+        }
+        #ai-glow {
+          position: absolute;
+          width: 280px;
+          height: 280px;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(201, 169, 110, 0.11) 0%,
+            transparent 65%
+          );
+          right: -50px;
+          top: -50px;
+          pointer-events: none;
+        }
+        #ai-eyebrow {
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.24em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 7px;
+        }
+        #ai-title {
+          font-size: 28px;
+          font-weight: 800;
+          color: #fff;
+          letter-spacing: -0.03em;
+          line-height: 1;
+          margin-bottom: 10px;
+        }
+        #ai-title .thin {
+          font-weight: 200;
+          font-style: italic;
+          color: rgba(255, 255, 255, 0.45);
+        }
+        #ai-desc {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.38);
+          line-height: 1.75;
+          margin-bottom: 18px;
+        }
+        #ai-input {
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: var(--radius-md);
+          padding: 5px 5px 5px 13px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 9px;
+        }
+        #ai-input-text {
+          flex: 1;
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.28);
+        }
+        #ai-go {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          background: var(--accent);
+          color: #fff;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          padding: 9px 14px;
+          border-radius: var(--radius-sm);
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        #ai-chips {
+          display: flex;
+          gap: 5px;
+          margin-bottom: 20px;
+          overflow-x: auto;
+        }
+        #ai-chips::-webkit-scrollbar {
+          display: none;
+        }
+        .ai-chip {
+          padding: 4px 10px;
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: 100px;
+          font-size: 9px;
+          color: rgba(255, 255, 255, 0.4);
+          font-weight: 500;
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        #ai-results {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .ai-card {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: var(--radius-md);
+          padding: 11px;
+          display: flex;
+          align-items: center;
+          gap: 11px;
+          cursor: pointer;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .ai-card-img {
+          width: 48px;
+          height: 48px;
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+        .ai-card-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .ai-card-info {
+          flex: 1;
+          min-width: 0;
+        }
+        .ai-card-brand {
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.28);
+          margin-bottom: 2px;
+        }
+        .ai-card-name {
+          font-size: 11px;
+          font-weight: 500;
+          color: #fff;
+          margin-bottom: 3px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .ai-card-stars {
+          display: flex;
+          gap: 1px;
+        }
+        .ai-card-right {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 4px;
+          flex-shrink: 0;
+        }
+        .ai-card-price {
+          font-size: 13px;
+          font-weight: 800;
+          color: #fff;
+        }
+        .ai-card-match {
+          font-size: 8px;
+          font-weight: 700;
+          padding: 2px 6px;
+          border-radius: 100px;
+          background: rgba(201, 169, 110, 0.18);
+          color: var(--accent);
+        }
+        .ai-card-add {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: var(--accent);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          cursor: pointer;
+        }
+      </style>
+<style id="trust-styles">
+        #trust-bar {
+          background: var(--background);
+          padding: 16px 20px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .trust-item {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          background: var(--secondary);
+          border-radius: var(--radius-lg);
+          padding: 11px 12px;
+        }
+        .ti-icon {
+          width: 34px;
+          height: 34px;
+          background: var(--card);
+          border-radius: var(--radius-md);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .ti-title {
+          font-size: 11px;
+          font-weight: 600;
+          color: var(--foreground);
+          margin-bottom: 1px;
+        }
+        .ti-sub {
+          font-size: 9px;
+          color: var(--muted-foreground);
+        }
+      </style>
+<style id="member-styles">
+        #member-section {
+          background: var(--secondary);
+          padding: 28px 20px 24px;
+        }
+        #member-img-wrap {
+          width: 100%;
+          aspect-ratio: 4/3;
+          border-radius: var(--radius-xl);
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 20px;
+        }
+        #member-img-wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        #member-float {
+          position: absolute;
+          bottom: 14px;
+          left: 14px;
+          background: rgba(255, 255, 255, 0.93);
+          backdrop-filter: blur(16px);
+          border-radius: var(--radius-lg);
+          padding: 11px 14px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+        }
+        #mf-avs {
+          display: flex;
+          margin-bottom: 5px;
+        }
+        .mfav {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 2px solid #fff;
+          margin-right: -5px;
+          flex-shrink: 0;
+        }
+        .mfav img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        #mf-plus {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: var(--accent);
+          color: #fff;
+          font-size: 7px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid #fff;
+          margin-left: 2px;
+          flex-shrink: 0;
+        }
+        #mf-title {
+          font-size: 11px;
+          font-weight: 700;
+          color: var(--foreground);
+        }
+        #mf-sub {
+          font-size: 9px;
+          color: var(--muted-foreground);
+          margin-top: 1px;
+        }
+
+        #member-eyebrow {
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.24em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 5px;
+        }
+        #member-title {
+          font-size: 28px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.03em;
+          line-height: 1.05;
+          margin-bottom: 10px;
+        }
+        #member-title .thin {
+          font-weight: 200;
+          font-style: italic;
+        }
+        #member-desc {
+          font-size: 12px;
+          color: var(--secondary-foreground);
+          line-height: 1.75;
+          margin-bottom: 18px;
+        }
+        #member-perks {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+          margin-bottom: 20px;
+        }
+        .mp-card {
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          padding: 13px;
+          display: flex;
+          align-items: flex-start;
+          gap: 9px;
+        }
+        .mp-icon {
+          width: 28px;
+          height: 28px;
+          background: rgba(201, 169, 110, 0.11);
+          border-radius: var(--radius-md);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .mp-title {
+          font-size: 11px;
+          font-weight: 700;
+          color: var(--foreground);
+          margin-bottom: 2px;
+        }
+        .mp-sub {
+          font-size: 9px;
+          color: var(--muted-foreground);
+          line-height: 1.45;
+        }
+        #member-cta {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          padding: 14px 28px;
+          background: var(--foreground);
+          color: #fff;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          border-radius: var(--radius-sm);
+          cursor: pointer;
+          width: 100%;
+        }
+      </style>
+<style id="reviews-styles">
+        #reviews-section {
+          background: var(--background);
+          padding: 28px 0 24px;
+        }
+        #rev-top {
+          padding: 0 20px;
+          margin-bottom: 18px;
+        }
+        #rev-agg {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-top: 10px;
+        }
+        #rev-big {
+          font-size: 44px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.04em;
+          line-height: 1;
+        }
+        #rev-stars-row {
+          display: flex;
+          gap: 2px;
+          margin-bottom: 3px;
+        }
+        #rev-count {
+          font-size: 10px;
+          color: var(--muted-foreground);
+        }
+        #reviews-scroll {
+          display: flex;
+          gap: 10px;
+          padding: 0 20px;
+          overflow-x: auto;
+        }
+        #reviews-scroll::-webkit-scrollbar {
+          display: none;
+        }
+        .rev-card {
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+          flex-shrink: 0;
+          width: 272px;
+        }
+        .rev-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .rev-user {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .rev-av {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+        .rev-av img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .rev-name {
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--foreground);
+        }
+        .rev-verified {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          font-size: 9px;
+          color: var(--success-foreground);
+          margin-top: 1px;
+        }
+        .rev-stars {
+          display: flex;
+          gap: 1px;
+        }
+        .rev-chip {
+          display: inline-block;
+          padding: 3px 8px;
+          background: var(--secondary);
+          border-radius: 100px;
+          font-size: 9px;
+          font-weight: 600;
+          color: var(--secondary-foreground);
+        }
+        .rev-text {
+          font-size: 11px;
+          color: var(--secondary-foreground);
+          line-height: 1.7;
+        }
+        .rev-date {
+          font-size: 9px;
+          color: var(--muted-foreground);
+        }
+      </style>
+<style id="nl-styles">
+        #newsletter {
+          background: var(--foreground);
+          position: relative;
+          overflow: hidden;
+          padding: 44px 22px;
+          text-align: center;
+        }
+        #nl-bg {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.15;
+        }
+        #nl-glow {
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(
+            ellipse 80% 80% at 50% 50%,
+            rgba(201, 169, 110, 0.1) 0%,
+            transparent 70%
+          );
+          pointer-events: none;
+        }
+        #nl-cnt {
+          position: relative;
+          z-index: 10;
+        }
+        #nl-eyebrow {
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.24em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 10px;
+        }
+        #nl-title {
+          font-size: 32px;
+          font-weight: 800;
+          color: #fff;
+          letter-spacing: -0.03em;
+          line-height: 1;
+          margin-bottom: 11px;
+        }
+        #nl-title .thin {
+          font-weight: 200;
+          font-style: italic;
+        }
+        #nl-desc {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.38);
+          line-height: 1.75;
+          margin-bottom: 22px;
+        }
+        #nl-form {
+          display: flex;
+          align-items: center;
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: 100px;
+          padding: 5px 5px 5px 18px;
+          gap: 5px;
+          margin-bottom: 12px;
+        }
+        #nl-input {
+          flex: 1;
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.3);
+          text-align: left;
+        }
+        #nl-btn {
+          padding: 10px 20px;
+          background: var(--accent);
+          color: #fff;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          border-radius: 100px;
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        #nl-perks {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+        .nl-perk {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 9px;
+          color: rgba(255, 255, 255, 0.28);
+        }
+      </style>
+<style id="footer-styles">
+        #footer {
+          background: var(--foreground);
+          padding: 32px 20px 96px;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        #footer-logo-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 11px;
+        }
+        #footer-logo-mark {
+          width: 26px;
+          height: 26px;
+          background: var(--accent);
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        #footer-logo-txt {
+          font-size: 14px;
+          font-weight: 800;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #fff;
+        }
+        #footer-desc {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.26);
+          line-height: 1.75;
+          margin-bottom: 16px;
+        }
+        #footer-social {
+          display: flex;
+          gap: 6px;
+          margin-bottom: 24px;
+        }
+        .fsoc {
+          width: 30px;
+          height: 30px;
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: 7px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        #footer-cols {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          margin-bottom: 24px;
+        }
+        .footer-col-title {
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.38);
+          margin-bottom: 10px;
+        }
+        .footer-links {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          list-style: none;
+        }
+        .footer-links li a {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.25);
+        }
+        #footer-bottom {
+          padding-top: 18px;
+          border-top: 1px solid rgba(255, 255, 255, 0.07);
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+        }
+        #footer-payments {
+          display: flex;
+          gap: 5px;
+          flex-wrap: wrap;
+        }
+        .pay-chip {
+          padding: 3px 8px;
+          background: rgba(255, 255, 255, 0.06);
+          border-radius: 4px;
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.28);
+        }
+        #footer-copy {
+          font-size: 10px;
+          color: rgba(255, 255, 255, 0.16);
+        }
+      </style>
+<style id="bottomnav-styles">
+        #bottomnav {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(250, 250, 248, 0.97);
+          backdrop-filter: blur(20px);
+          border-top: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          padding: 10px 0 13px;
+          z-index: 200;
+        }
+        .bnav-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 3px;
+          cursor: pointer;
+          flex: 1;
+        }
+        .bnav-icon {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+        .bnav-lbl {
+          font-size: 9px;
+          font-weight: 600;
+          color: var(--muted-foreground);
+          white-space: nowrap;
+        }
+        .bnav-item.active .bnav-lbl {
+          color: var(--foreground);
+        }
+        .bnav-badge {
+          position: absolute;
+          top: -2px;
+          right: -3px;
+          width: 13px;
+          height: 13px;
+          background: var(--accent);
+          color: #fff;
+          border-radius: 50%;
+          font-size: 7px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .bnav-center {
+          width: 46px;
+          height: 46px;
+          background: var(--foreground);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          cursor: pointer;
+          margin-top: -20px;
+          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+        }
+      </style>
+<style>
+    :root {
+      --background: #f7f7f7;
+      --foreground: #1e2d52;
+      --border: #d9dde5;
+      --input: #ffffff;
+      --primary: #1e2d52;
+      --primary-foreground: #ffffff;
+      --secondary: #f4e3cf;
+      --secondary-foreground: #1e2d52;
+      --muted: #eef1f5;
+      --muted-foreground: #5e6472;
+      --success: #2e7d32;
+      --success-foreground: #ffffff;
+      --accent: #c8a96a;
+      --accent-foreground: #ffffff;
+      --destructive: #d32f2f;
+      --destructive-foreground: #ffffff;
+      --warning: #f59e0b;
+      --warning-foreground: #ffffff;
+      --card: #ffffff;
+      --card-foreground: #1e2d52;
+      --sidebar: #1e2d52;
+      --sidebar-foreground: #ffffff;
+      --sidebar-primary: #c8a96a;
+      --sidebar-primary-foreground: #ffffff;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+      --radius-lg: 6px;
+      --radius-xl: 10px;
+      --font-family-body: Inter;
+    }
+  </style>
+
+<style id="responsive-overrides">
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .export-wrapper {
+    width: 100% !important;
+    min-height: 100vh !important;
+  }
+</style>
+
+</head>
+<body>
+<!-- TOPBAR -->
+      <div id="topbar">
+        <div id="topbar-logo">
+          <div id="topbar-logo-mark">
+            <iconify-icon
+              icon="lucide:gem"
+              style="font-size: 15px; color: #fff"
+            ></iconify-icon>
+          </div>
+          <div id="topbar-logo-text">VELUX</div>
+        </div>
+        <div id="topbar-right">
+          <div class="topbar-icon-btn" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:search"
+              style="font-size: 18px; color: var(--foreground)"
+            ></iconify-icon>
+          </div>
+          <div class="topbar-icon-btn" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:user"
+              style="font-size: 18px; color: var(--foreground)"
+            ></iconify-icon>
+          </div>
+          <div
+            class="topbar-icon-btn"
+            data-media-type="banani-button"
+            style="position: relative"
+          >
+            <iconify-icon
+              icon="lucide:shopping-bag"
+              style="font-size: 18px; color: var(--foreground)"
+            ></iconify-icon>
+            <div class="topbar-cart-badge">3</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNOUNCE BAR -->
+      <div id="announce-bar">
+        <div id="announce-dot"></div>
+        <div id="announce-text">
+          Free worldwide shipping on orders over $300
+        </div>
+        <div id="announce-dot"></div>
+        <div id="announce-accent">Sale — Up to 40% Off</div>
+      </div>
+
+      <!-- HERO -->
+      <section id="hero">
+        <img
+          id="hero-img"
+          data-query="ultra luxury fashion editorial tall portrait woman flowing cream silk gown moody dark cinematic warm light photorealistic premium couture dark background"
+          data-aspect-ratio="3:4"
+          alt="Hero"
+          src="https://app.banani.co/image-fallback.png"
+        />
+
+        <!-- Float left: review pill -->
+        <div id="hf-left">
+          <div class="hfl-av">
+            <img
+              src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F25-35%2FEuropean%2F2"
+              alt="av1"
+            />
+          </div>
+          <div class="hfl-av">
+            <img
+              src="https://storage.googleapis.com/banani-avatars/avatar%2Fmale%2F35-50%2FNorth%20American%2F4"
+              alt="av2"
+            />
+          </div>
+          <div class="hfl-av">
+            <img
+              src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F18-25%2FEast%20Asian%2F1"
+              alt="av3"
+            />
+          </div>
+          <div>
+            <div id="hfl-text">4.9★ Rating</div>
+            <div id="hfl-sub">48K reviews</div>
+          </div>
+        </div>
+
+        <!-- Float right: auth badge -->
+        <div id="hf-right">
+          <div id="hfr-icon">
+            <iconify-icon
+              icon="lucide:shield-check"
+              style="font-size: 14px; color: var(--success-foreground)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div id="hfr-title">100% Authentic</div>
+            <div id="hfr-sub">Every item certified</div>
+          </div>
+        </div>
+
+        <div id="hero-overlay"></div>
+        <div id="hero-content">
+          <div id="hero-pill-row">
+            <div class="h-pill h-pill-glass">
+              <iconify-icon
+                icon="lucide:sparkles"
+                style="font-size: 8px; color: rgba(255, 255, 255, 0.85)"
+              ></iconify-icon>
+              SS 2025
+            </div>
+            <div class="h-pill h-pill-gold">
+              <iconify-icon
+                icon="lucide:zap"
+                style="font-size: 8px; color: var(--accent)"
+              ></iconify-icon>
+              AI-Powered Search
+            </div>
+          </div>
+
+          <h1 id="hero-title">
+            Refined.<br />
+            <span class="italic">Authentic.</span><br />
+            <span class="gold">Luxurious.</span>
+          </h1>
+          <p id="hero-desc">
+            50,000+ authenticated luxury pieces from 500+ world-class brands,
+            delivered to 120+ countries.
+          </p>
+
+          <div id="hero-search-box">
+            <div id="hsb-label">
+              <iconify-icon
+                icon="lucide:sparkles"
+                style="font-size: 9px; color: var(--accent)"
+              ></iconify-icon>
+              AI Product Search
+            </div>
+            <div id="hsb-row">
+              <div id="hsb-input">
+                <iconify-icon
+                  icon="lucide:search"
+                  style="
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.35);
+                    flex-shrink: 0;
+                  "
+                ></iconify-icon>
+                <div id="hsb-placeholder">
+                  Find me a cashmere coat under $800…
+                </div>
+              </div>
+              <div id="hsb-btn" data-media-type="banani-button">
+                <iconify-icon
+                  icon="lucide:zap"
+                  style="font-size: 10px; color: #fff"
+                ></iconify-icon>
+                Search
+              </div>
+            </div>
+            <div id="hsb-chips">
+              <div class="hsb-chip" data-media-type="banani-button">
+                Gold watches
+              </div>
+              <div class="hsb-chip" data-media-type="banani-button">
+                Silk dresses
+              </div>
+              <div class="hsb-chip" data-media-type="banani-button">
+                Designer bags
+              </div>
+              <div class="hsb-chip" data-media-type="banani-button">
+                Evening wear
+              </div>
+            </div>
+          </div>
+
+          <div id="hero-stats-row">
+            <div class="hs">
+              <div class="hs-num">50K+</div>
+              <div class="hs-lbl">Products</div>
+            </div>
+            <div class="hs">
+              <div class="hs-num">500+</div>
+              <div class="hs-lbl">Brands</div>
+            </div>
+            <div class="hs">
+              <div class="hs-num">4.9★</div>
+              <div class="hs-lbl">Rating</div>
+            </div>
+            <div class="hs">
+              <div class="hs-num">120+</div>
+              <div class="hs-lbl">Countries</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TICKER -->
+      <div id="ticker">
+        <div class="tick-item">
+          <div class="tick-icon">
+            <iconify-icon
+              icon="lucide:truck"
+              style="font-size: 11px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="tick-title">Free Worldwide Shipping</div>
+            <div class="tick-sub">Orders over $300</div>
+          </div>
+        </div>
+        <div class="tick-sep"></div>
+        <div class="tick-item">
+          <div class="tick-icon">
+            <iconify-icon
+              icon="lucide:shield-check"
+              style="font-size: 11px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="tick-title">100% Authenticated</div>
+            <div class="tick-sub">Every piece certified</div>
+          </div>
+        </div>
+        <div class="tick-sep"></div>
+        <div class="tick-item">
+          <div class="tick-icon">
+            <iconify-icon
+              icon="lucide:refresh-ccw"
+              style="font-size: 11px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="tick-title">Free 30-Day Returns</div>
+            <div class="tick-sub">No questions asked</div>
+          </div>
+        </div>
+        <div class="tick-sep"></div>
+        <div class="tick-item">
+          <div class="tick-icon">
+            <iconify-icon
+              icon="lucide:lock"
+              style="font-size: 11px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="tick-title">Secure Payments</div>
+            <div class="tick-sub">256-bit SSL</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRANDS -->
+      <div id="brands-wrap">
+        <div id="brands-lbl">Trusted Brands</div>
+        <div class="brand-nm">Maison Éclat</div>
+        <div class="brand-nm">Atelier Noir</div>
+        <div class="brand-nm">Tempo Doré</div>
+        <div class="brand-nm">Brioni Heritage</div>
+        <div class="brand-nm">Lumière Paris</div>
+        <div class="brand-nm">Obsidian Co.</div>
+        <div class="brand-nm">Château Blanc</div>
+      </div>
+
+      <!-- CATEGORIES -->
+      <section id="categories-section">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow">Explore</div>
+            <h2 class="sec-title">
+              Premium <span class="thin">Categories</span>
+            </h2>
+          </div>
+          <div class="view-all-btn" data-media-type="banani-button">
+            All
+            <iconify-icon
+              icon="lucide:arrow-right"
+              style="font-size: 10px; color: var(--secondary-foreground)"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div id="cat-scroll">
+          <div class="cat-card wide" data-media-type="banani-button">
+            <img
+              data-query="ultra luxury womenswear editorial flowing white silk dress warm golden cinematic light photorealistic premium portrait"
+              data-aspect-ratio="2:3"
+              alt="Womenswear"
+              src="https://app.banani.co/image-fallback.png"
+            />
+            <div class="cat-ov"></div>
+            <div class="cat-arr">
+              <iconify-icon
+                icon="lucide:arrow-up-right"
+                style="font-size: 10px; color: #fff"
+              ></iconify-icon>
+            </div>
+            <div class="cat-info">
+              <div class="cat-micro">Most Popular</div>
+              <div class="cat-name">Womenswear</div>
+              <div class="cat-count">4,200+ pieces</div>
+            </div>
+          </div>
+          <div class="cat-card" data-media-type="banani-button">
+            <img
+              data-query="luxury menswear editorial tailored dark suit elegant man studio professional warm light photorealistic"
+              data-aspect-ratio="2:3"
+              alt="Menswear"
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/0c5aa0d8-de5a-4880-99c5-0dee637f7594.jpg"
+            />
+            <div class="cat-ov"></div>
+            <div class="cat-arr">
+              <iconify-icon
+                icon="lucide:arrow-up-right"
+                style="font-size: 10px; color: #fff"
+              ></iconify-icon>
+            </div>
+            <div class="cat-info">
+              <div class="cat-micro">Classic</div>
+              <div class="cat-name">Menswear</div>
+              <div class="cat-count">2,100+</div>
+            </div>
+          </div>
+          <div class="cat-card" data-media-type="banani-button">
+            <img
+              data-query="luxury designer handbag leather gold hardware white marble minimal editorial premium product"
+              data-aspect-ratio="2:3"
+              alt="Accessories"
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/4f2c279f-f9f0-4ab4-8862-a7785b89fc04.jpg"
+            />
+            <div class="cat-ov"></div>
+            <div class="cat-arr">
+              <iconify-icon
+                icon="lucide:arrow-up-right"
+                style="font-size: 10px; color: #fff"
+              ></iconify-icon>
+            </div>
+            <div class="cat-info">
+              <div class="cat-micro">Iconic</div>
+              <div class="cat-name">Accessories</div>
+              <div class="cat-count">1,800+</div>
+            </div>
+          </div>
+          <div class="cat-card" data-media-type="banani-button">
+            <img
+              data-query="luxury premium leather heels pumps footwear product white background minimal editorial elegant"
+              data-aspect-ratio="2:3"
+              alt="Footwear"
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/52a40066-5ec6-4ef7-954e-bd6640c927fa.jpg"
+            />
+            <div class="cat-ov"></div>
+            <div class="cat-arr">
+              <iconify-icon
+                icon="lucide:arrow-up-right"
+                style="font-size: 10px; color: #fff"
+              ></iconify-icon>
+            </div>
+            <div class="cat-info">
+              <div class="cat-micro">Signature</div>
+              <div class="cat-name">Footwear</div>
+              <div class="cat-count">900+</div>
+            </div>
+          </div>
+          <div class="cat-card" data-media-type="banani-button">
+            <img
+              data-query="luxury skincare beauty gold packaging premium white minimal editorial high end cosmetics"
+              data-aspect-ratio="2:3"
+              alt="Beauty"
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/ee2a9485-0f5e-4f9c-9617-a872d9534084.jpg"
+            />
+            <div class="cat-ov"></div>
+            <div class="cat-arr">
+              <iconify-icon
+                icon="lucide:arrow-up-right"
+                style="font-size: 10px; color: #fff"
+              ></iconify-icon>
+            </div>
+            <div class="cat-info">
+              <div class="cat-micro">Essentials</div>
+              <div class="cat-name">Beauty</div>
+              <div class="cat-count">620+</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section id="products-section">
+        <div class="sec-header" style="padding: 0 20px; margin-bottom: 14px">
+          <div>
+            <div class="sec-eyebrow">Just Dropped</div>
+            <h2 class="sec-title">New <span class="thin">Arrivals</span></h2>
+          </div>
+          <div class="view-all-btn" data-media-type="banani-button">
+            All
+            <iconify-icon
+              icon="lucide:arrow-right"
+              style="font-size: 10px; color: var(--secondary-foreground)"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div id="prod-tabs-wrap">
+          <div id="prod-tabs-inner">
+            <div class="prod-tab active">All</div>
+            <div class="prod-tab">Women</div>
+            <div class="prod-tab">Men</div>
+            <div class="prod-tab">Accessories</div>
+            <div class="prod-tab">Beauty</div>
+          </div>
+        </div>
+        <div id="prod-scroll">
+          <div class="prod-card" data-media-type="banani-button">
+            <div class="prod-img">
+              <img
+                data-query="luxury cashmere rib knit sweater product white background minimal elegant premium cream"
+                data-aspect-ratio="3:4"
+                alt="Sweater"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/7c77a3f0-95c6-4341-bfaf-eff4d87a9153.jpg"
+              />
+              <div class="prod-bdg pb-new">New</div>
+              <div class="prod-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 11px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="prod-body">
+              <div class="prod-brand">Velour Studio</div>
+              <div class="prod-name">Cashmere Rib Sweater</div>
+              <div class="prod-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="prod-price">$320</div>
+            </div>
+            <div class="prod-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:shopping-bag"
+                style="font-size: 9px; color: #fff"
+              ></iconify-icon>
+              Add to Bag
+            </div>
+          </div>
+          <div class="prod-card" data-media-type="banani-button">
+            <div class="prod-img">
+              <img
+                data-query="luxury suede ankle boot premium footwear product white background clean minimal editorial"
+                data-aspect-ratio="3:4"
+                alt="Boot"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/42461a36-8a5b-4846-8dcf-2189979e1816.jpg"
+              />
+              <div class="prod-bdg pb-lim">Limited</div>
+              <div class="prod-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 11px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="prod-body">
+              <div class="prod-brand">Lumière Paris</div>
+              <div class="prod-name">Suede Ankle Boot</div>
+              <div class="prod-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="prod-price">$695</div>
+            </div>
+            <div class="prod-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:shopping-bag"
+                style="font-size: 9px; color: #fff"
+              ></iconify-icon>
+              Add to Bag
+            </div>
+          </div>
+          <div class="prod-card" data-media-type="banani-button">
+            <div class="prod-img">
+              <img
+                data-query="luxury diamond drop gold earrings jewelry product white background elegant minimal sparkle"
+                data-aspect-ratio="3:4"
+                alt="Earrings"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/fd3624a1-4ab3-4bd7-b15f-96d795e8b2ff.jpg"
+              />
+              <div class="prod-bdg pb-new">New</div>
+              <div class="prod-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 11px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="prod-body">
+              <div class="prod-brand">Obsidian Co.</div>
+              <div class="prod-name">Diamond Earrings</div>
+              <div class="prod-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="prod-price">$2,800</div>
+            </div>
+            <div class="prod-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:shopping-bag"
+                style="font-size: 9px; color: #fff"
+              ></iconify-icon>
+              Add to Bag
+            </div>
+          </div>
+          <div class="prod-card" data-media-type="banani-button">
+            <div class="prod-img">
+              <img
+                data-query="luxury silk tailored blazer womens product white background clean minimal elegant high fashion"
+                data-aspect-ratio="3:4"
+                alt="Blazer"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/af1b3907-a675-4cc4-8e1e-f8afe89a657b.jpg"
+              />
+              <div class="prod-bdg pb-sale">−25%</div>
+              <div class="prod-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 11px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="prod-body">
+              <div class="prod-brand">Brioni Heritage</div>
+              <div class="prod-name">Silk Blazer</div>
+              <div class="prod-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div style="display: flex; align-items: center; gap: 5px">
+                <div class="prod-price">$1,120</div>
+                <div class="prod-old">$1,490</div>
+              </div>
+            </div>
+            <div class="prod-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:shopping-bag"
+                style="font-size: 9px; color: #fff"
+              ></iconify-icon>
+              Add to Bag
+            </div>
+          </div>
+          <div class="prod-card" data-media-type="banani-button">
+            <div class="prod-img">
+              <img
+                data-query="luxury mens tailored wool overcoat product white background minimal editorial premium clean high fashion"
+                data-aspect-ratio="3:4"
+                alt="Overcoat"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/144c1980-095a-4af4-b029-c4948cf6ed93.jpg"
+              />
+              <div class="prod-bdg pb-new">New</div>
+              <div class="prod-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 11px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="prod-body">
+              <div class="prod-brand">Château Blanc</div>
+              <div class="prod-name">Wool Overcoat</div>
+              <div class="prod-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="prod-price">$2,400</div>
+            </div>
+            <div class="prod-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:shopping-bag"
+                style="font-size: 9px; color: #fff"
+              ></iconify-icon>
+              Add to Bag
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDITORIAL -->
+      <section id="editorial-section">
+        <div class="ed-block" data-media-type="banani-button">
+          <img
+            data-query="ultra luxury fashion editorial cinematic woman gold silk evening gown marble palace dramatic warm light photorealistic premium wide"
+            data-aspect-ratio="4:3"
+            alt="Collection"
+            src="https://storage.googleapis.com/banani-generated-images/generated-images/bbc90d1b-de11-49e7-ba54-5393d1c25dda.jpg"
+          />
+          <div class="ed-ov"></div>
+          <div class="ed-cnt">
+            <div class="ed-tag">
+              <iconify-icon
+                icon="lucide:sparkles"
+                style="font-size: 8px; color: #fff"
+              ></iconify-icon>
+              New Collection
+            </div>
+            <div class="ed-title">The Prestige<br />Edit 2025</div>
+            <div class="ed-desc">
+              The season's most coveted pieces — each a masterwork of craft and
+              vision.
+            </div>
+            <div class="ed-btn" data-media-type="banani-button">
+              Shop Now
+              <iconify-icon
+                icon="lucide:arrow-right"
+                style="font-size: 11px; color: var(--foreground)"
+              ></iconify-icon>
+            </div>
+          </div>
+        </div>
+        <div id="ed-row">
+          <div class="ed-half" data-media-type="banani-button">
+            <img
+              data-query="luxury gold jewelry accessories editorial cinematic warm moody tones premium photorealistic"
+              data-aspect-ratio="1:1"
+              alt="Sale"
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/3f464f37-5bb8-42cb-ae40-b0f7df41289d.jpg"
+            />
+            <div class="ed-ov"></div>
+            <div class="ed-sale-bubble">
+              <div class="ed-sb-num">40%</div>
+              <div class="ed-sb-off">Off</div>
+            </div>
+            <div class="ed-cnt" style="padding: 12px 12px">
+              <div class="ed-tag" style="margin-bottom: 5px">
+                <iconify-icon
+                  icon="lucide:clock"
+                  style="font-size: 8px; color: #fff"
+                ></iconify-icon>
+                Sale Live
+              </div>
+              <div class="ed-title" style="font-size: 15px; margin-bottom: 7px">
+                Season Sale
+              </div>
+              <div
+                class="ed-btn gold"
+                style="padding: 6px 13px; font-size: 9px"
+                data-media-type="banani-button"
+              >
+                Shop Sale
+              </div>
+            </div>
+          </div>
+          <div class="ed-half" data-media-type="banani-button">
+            <img
+              data-query="luxury menswear editorial sophisticated man tailored suit cinematic warm premium brand studio"
+              data-aspect-ratio="1:1"
+              alt="Menswear"
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/dc0c2c78-d06e-45cf-be7e-09557c4742ad.jpg"
+            />
+            <div class="ed-ov"></div>
+            <div class="ed-cnt" style="padding: 12px 12px">
+              <div class="ed-tag" style="margin-bottom: 5px">
+                <iconify-icon
+                  icon="lucide:gem"
+                  style="font-size: 8px; color: #fff"
+                ></iconify-icon>
+                For Him
+              </div>
+              <div class="ed-title" style="font-size: 15px; margin-bottom: 7px">
+                Gentleman's Edit
+              </div>
+              <div
+                class="ed-btn"
+                style="padding: 6px 13px; font-size: 9px"
+                data-media-type="banani-button"
+              >
+                Explore
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI SEARCH -->
+      <section id="ai-section">
+        <div id="ai-glow"></div>
+        <div id="ai-eyebrow">AI-Powered Discovery</div>
+        <h2 id="ai-title">
+          Find Anything,<br /><span class="thin">Instantly.</span>
+        </h2>
+        <p id="ai-desc">
+          Just describe what you want — our AI finds the perfect match from
+          50,000+ curated luxury pieces.
+        </p>
+        <div id="ai-input">
+          <iconify-icon
+            icon="lucide:sparkles"
+            style="font-size: 13px; color: var(--accent); flex-shrink: 0"
+          ></iconify-icon>
+          <div id="ai-input-text">
+            "Silk dresses for a summer gala under $600"
+          </div>
+          <div id="ai-go" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:search"
+              style="font-size: 9px; color: #fff"
+            ></iconify-icon>
+            Search
+          </div>
+        </div>
+        <div id="ai-chips">
+          <div class="ai-chip" data-media-type="banani-button">
+            Cashmere coats
+          </div>
+          <div class="ai-chip" data-media-type="banani-button">
+            Gold watches
+          </div>
+          <div class="ai-chip" data-media-type="banani-button">
+            Evening gowns
+          </div>
+          <div class="ai-chip" data-media-type="banani-button">
+            Leather bags
+          </div>
+        </div>
+        <div id="ai-results">
+          <div class="ai-card" data-media-type="banani-button">
+            <div class="ai-card-img">
+              <img
+                data-query="luxury silk charmeuse slip dress cream product white background minimal editorial"
+                data-aspect-ratio="1:1"
+                alt="Silk Dress"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/06641d8b-e703-4a92-bd23-de979516f9f2.jpg"
+              />
+            </div>
+            <div class="ai-card-info">
+              <div class="ai-card-brand">Maison Éclat</div>
+              <div class="ai-card-name">Silk Charmeuse Slip Dress</div>
+              <div class="ai-card-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="ai-card-right">
+              <div class="ai-card-price">$485</div>
+              <div class="ai-card-match">98% Match</div>
+            </div>
+            <div class="ai-card-add">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 11px; color: #fff"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div class="ai-card" data-media-type="banani-button">
+            <div class="ai-card-img">
+              <img
+                data-query="luxury draped chiffon evening gown white background product minimal editorial elegant"
+                data-aspect-ratio="1:1"
+                alt="Gown"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/d55d6b94-70e8-4cf2-9330-edb423fa1229.jpg"
+              />
+            </div>
+            <div class="ai-card-info">
+              <div class="ai-card-brand">Lumière Paris</div>
+              <div class="ai-card-name">Draped Chiffon Gown</div>
+              <div class="ai-card-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="ai-card-right">
+              <div class="ai-card-price">$560</div>
+              <div class="ai-card-match">94% Match</div>
+            </div>
+            <div class="ai-card-add">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 11px; color: #fff"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div class="ai-card" data-media-type="banani-button">
+            <div class="ai-card-img">
+              <img
+                data-query="luxury satin asymmetric midi dress product white background minimal editorial premium"
+                data-aspect-ratio="1:1"
+                alt="Midi Dress"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/0b58e3be-12b2-4745-bd74-69ad796d44b5.jpg"
+              />
+            </div>
+            <div class="ai-card-info">
+              <div class="ai-card-brand">Velour Studio</div>
+              <div class="ai-card-name">Satin Asymmetric Midi</div>
+              <div class="ai-card-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 9px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="ai-card-right">
+              <div class="ai-card-price">$395</div>
+              <div class="ai-card-match">91% Match</div>
+            </div>
+            <div class="ai-card-add">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 11px; color: #fff"
+              ></iconify-icon>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST BAR -->
+      <div id="trust-bar">
+        <div class="trust-item">
+          <div class="ti-icon">
+            <iconify-icon
+              icon="lucide:truck"
+              style="font-size: 16px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="ti-title">Express Delivery</div>
+            <div class="ti-sub">Next-day, 50+ countries</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="ti-icon">
+            <iconify-icon
+              icon="lucide:shield-check"
+              style="font-size: 16px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="ti-title">100% Authentic</div>
+            <div class="ti-sub">Certified items only</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="ti-icon">
+            <iconify-icon
+              icon="lucide:refresh-ccw"
+              style="font-size: 16px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="ti-title">Free Returns</div>
+            <div class="ti-sub">30-day policy</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="ti-icon">
+            <iconify-icon
+              icon="lucide:lock"
+              style="font-size: 16px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="ti-title">Secure Payments</div>
+            <div class="ti-sub">256-bit encryption</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBER SECTION -->
+      <section id="member-section">
+        <div id="member-img-wrap">
+          <img
+            data-query="luxury fashion elegant woman in white coat premium clean white studio cinematic warm light photorealistic portrait wide"
+            data-aspect-ratio="4:3"
+            alt="Member"
+            src="https://storage.googleapis.com/banani-generated-images/generated-images/9793630d-d3ca-4b47-8380-e0a863756d7b.jpg"
+          />
+          <div id="member-float">
+            <div id="mf-avs">
+              <div class="mfav">
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F25-35%2FEuropean%2F5"
+                  alt="av1"
+                />
+              </div>
+              <div class="mfav">
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar%2Fmale%2F35-50%2FMiddle%20Eastern%2F2"
+                  alt="av2"
+                />
+              </div>
+              <div class="mfav">
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F18-25%2FEast%20Asian%2F3"
+                  alt="av3"
+                />
+              </div>
+              <div id="mf-plus">+2K</div>
+            </div>
+            <div id="mf-title">120,000+ Members</div>
+            <div id="mf-sub">Enjoying exclusive benefits</div>
+          </div>
+        </div>
+        <div id="member-eyebrow">VELUX Membership</div>
+        <h2 id="member-title">
+          Exclusive <span class="thin">Benefits</span><br />For Members
+        </h2>
+        <p id="member-desc">
+          Join our global community. Early access, private sales, free express
+          delivery, and a personal stylist.
+        </p>
+        <div id="member-perks">
+          <div class="mp-card">
+            <div class="mp-icon">
+              <iconify-icon
+                icon="lucide:zap"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div>
+              <div class="mp-title">Early Access</div>
+              <div class="mp-sub">First look at new drops</div>
+            </div>
+          </div>
+          <div class="mp-card">
+            <div class="mp-icon">
+              <iconify-icon
+                icon="lucide:truck"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div>
+              <div class="mp-title">Free Shipping</div>
+              <div class="mp-sub">Worldwide express</div>
+            </div>
+          </div>
+          <div class="mp-card">
+            <div class="mp-icon">
+              <iconify-icon
+                icon="lucide:percent"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div>
+              <div class="mp-title">Private Sales</div>
+              <div class="mp-sub">Up to 50% off events</div>
+            </div>
+          </div>
+          <div class="mp-card">
+            <div class="mp-icon">
+              <iconify-icon
+                icon="lucide:sparkles"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div>
+              <div class="mp-title">Personal Stylist</div>
+              <div class="mp-sub">AI + human styling</div>
+            </div>
+          </div>
+        </div>
+        <div id="member-cta" data-media-type="banani-button">
+          Become a Member
+          <iconify-icon
+            icon="lucide:arrow-right"
+            style="font-size: 12px; color: #fff"
+          ></iconify-icon>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section id="reviews-section">
+        <div id="rev-top">
+          <div>
+            <div class="sec-eyebrow">Social Proof</div>
+            <h2 class="sec-title">
+              What Our <span class="thin">Customers Say</span>
+            </h2>
+          </div>
+          <div id="rev-agg">
+            <div id="rev-big">4.9</div>
+            <div>
+              <div id="rev-stars-row">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 12px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 12px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 12px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 12px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 12px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div id="rev-count">48,000+ verified reviews</div>
+            </div>
+          </div>
+        </div>
+        <div id="reviews-scroll">
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-user">
+                <div class="rev-av">
+                  <img
+                    src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F25-35%2FEuropean%2F5"
+                    alt="Sophie"
+                  />
+                </div>
+                <div>
+                  <div class="rev-name">Sophie Laurent</div>
+                  <div class="rev-verified">
+                    <iconify-icon
+                      icon="lucide:check-circle"
+                      style="font-size: 9px; color: var(--success-foreground)"
+                    ></iconify-icon>
+                    Verified Purchase
+                  </div>
+                </div>
+              </div>
+              <div class="rev-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="rev-chip">Silk Charmeuse Slip Dress</div>
+            <div class="rev-text">
+              "The quality is absolutely breathtaking. VELUX is unmatched in
+              authenticity, packaging, and speed. Ordered four times — each
+              experience is flawless."
+            </div>
+            <div class="rev-date">June 10, 2025</div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-user">
+                <div class="rev-av">
+                  <img
+                    src="https://storage.googleapis.com/banani-avatars/avatar%2Fmale%2F35-50%2FMiddle%20Eastern%2F2"
+                    alt="Omar"
+                  />
+                </div>
+                <div>
+                  <div class="rev-name">Omar Al-Hassan</div>
+                  <div class="rev-verified">
+                    <iconify-icon
+                      icon="lucide:check-circle"
+                      style="font-size: 9px; color: var(--success-foreground)"
+                    ></iconify-icon>
+                    Verified Purchase
+                  </div>
+                </div>
+              </div>
+              <div class="rev-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="rev-chip">18K Gold Automatic Watch</div>
+            <div class="rev-text">
+              "AI search made finding what I wanted effortless. The watch
+              presentation box alone is worth the price. Will shop exclusively
+              here going forward."
+            </div>
+            <div class="rev-date">June 7, 2025</div>
+          </div>
+          <div class="rev-card">
+            <div class="rev-top">
+              <div class="rev-user">
+                <div class="rev-av">
+                  <img
+                    src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F18-25%2FEast%20Asian%2F3"
+                    alt="Yuki"
+                  />
+                </div>
+                <div>
+                  <div class="rev-name">Yuki Tanaka</div>
+                  <div class="rev-verified">
+                    <iconify-icon
+                      icon="lucide:check-circle"
+                      style="font-size: 9px; color: var(--success-foreground)"
+                    ></iconify-icon>
+                    Verified Purchase
+                  </div>
+                </div>
+              </div>
+              <div class="rev-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="rev-chip">Structured Leather Tote</div>
+            <div class="rev-text">
+              "Member early access is incredible — got the sold-out tote before
+              public release. Personal stylist nailed the color. A 10/10
+              experience."
+            </div>
+            <div class="rev-date">May 29, 2025</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section id="newsletter">
+        <img
+          id="nl-bg"
+          data-query="luxury fashion abstract bokeh gold shimmer texture dark background cinematic premium"
+          data-aspect-ratio="1:1"
+          alt="bg"
+          src="https://storage.googleapis.com/banani-generated-images/generated-images/cc90b5f7-e711-441e-b606-55c1eac7bf2a.jpg"
+        />
+        <div id="nl-glow"></div>
+        <div id="nl-cnt">
+          <div id="nl-eyebrow">Inner Circle</div>
+          <h2 id="nl-title">
+            Get <span class="thin">Exclusive</span><br />Access First
+          </h2>
+          <p id="nl-desc">
+            Join 80,000+ members. First for new drops, private sales, and
+            curated edits — weekly.
+          </p>
+          <div id="nl-form">
+            <div id="nl-input">Enter your email address…</div>
+            <div id="nl-btn" data-media-type="banani-button">Join Now</div>
+          </div>
+          <div id="nl-perks">
+            <div class="nl-perk">
+              <iconify-icon
+                icon="lucide:check"
+                style="font-size: 9px; color: var(--accent)"
+              ></iconify-icon>
+              No spam, ever
+            </div>
+            <div class="nl-perk">
+              <iconify-icon
+                icon="lucide:check"
+                style="font-size: 9px; color: var(--accent)"
+              ></iconify-icon>
+              Unsubscribe anytime
+            </div>
+            <div class="nl-perk">
+              <iconify-icon
+                icon="lucide:check"
+                style="font-size: 9px; color: var(--accent)"
+              ></iconify-icon>
+              Early access guaranteed
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer id="footer">
+        <div id="footer-logo-row">
+          <div id="footer-logo-mark">
+            <iconify-icon
+              icon="lucide:gem"
+              style="font-size: 13px; color: #fff"
+            ></iconify-icon>
+          </div>
+          <div id="footer-logo-txt">VELUX</div>
+        </div>
+        <p id="footer-desc">
+          The world's most trusted luxury marketplace. Curated with care,
+          authenticated with rigor, delivered with love.
+        </p>
+        <div id="footer-social">
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:instagram"
+              style="font-size: 13px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:twitter"
+              style="font-size: 13px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:youtube"
+              style="font-size: 13px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:facebook"
+              style="font-size: 13px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div id="footer-cols">
+          <div>
+            <div class="footer-col-title">Shop</div>
+            <ul class="footer-links">
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Sale</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-links">
+              <li><a href="#">About VELUX</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="footer-bottom">
+          <div id="footer-payments">
+            <div class="pay-chip">Visa</div>
+            <div class="pay-chip">MC</div>
+            <div class="pay-chip">Amex</div>
+            <div class="pay-chip">PayPal</div>
+            <div class="pay-chip">Apple Pay</div>
+            <div class="pay-chip">Crypto</div>
+          </div>
+          <div id="footer-copy">© 2025 VELUX. All rights reserved.</div>
+        </div>
+      </footer>
+
+      <!-- BOTTOM NAV -->
+      <div id="bottomnav">
+        <div class="bnav-item active" data-media-type="banani-button">
+          <div class="bnav-icon">
+            <iconify-icon
+              icon="lucide:home"
+              style="font-size: 20px; color: var(--foreground)"
+            ></iconify-icon>
+          </div>
+          <div class="bnav-lbl" style="color: var(--foreground)">Home</div>
+        </div>
+        <div class="bnav-item" data-media-type="banani-button">
+          <div class="bnav-icon">
+            <iconify-icon
+              icon="lucide:layout-grid"
+              style="font-size: 20px; color: var(--muted-foreground)"
+            ></iconify-icon>
+          </div>
+          <div class="bnav-lbl">Categories</div>
+        </div>
+        <div class="bnav-item" data-media-type="banani-button">
+          <div class="bnav-center">
+            <iconify-icon
+              icon="lucide:search"
+              style="font-size: 20px; color: #fff"
+            ></iconify-icon>
+          </div>
+          <div class="bnav-lbl" style="margin-top: 2px">Search</div>
+        </div>
+        <div class="bnav-item" data-media-type="banani-button">
+          <div class="bnav-icon">
+            <iconify-icon
+              icon="lucide:heart"
+              style="font-size: 20px; color: var(--muted-foreground)"
+            ></iconify-icon>
+          </div>
+          <div class="bnav-lbl">Wishlist</div>
+        </div>
+        <div class="bnav-item" data-media-type="banani-button">
+          <div class="bnav-icon" style="position: relative">
+            <iconify-icon
+              icon="lucide:shopping-bag"
+              style="font-size: 20px; color: var(--muted-foreground)"
+            ></iconify-icon>
+            <div class="bnav-badge">3</div>
+          </div>
+          <div class="bnav-lbl">Bag</div>
+        </div>
+      </div>
+</body>
+</html>
