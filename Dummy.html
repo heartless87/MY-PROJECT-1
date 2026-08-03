@@ -639,53 +639,44 @@
           border-radius: 100px;
           padding: 4px;
         }
-        #prod-tabs-inner input{
+        #prod-tabs-inner input {
           display: none;
         }
-        .tab-slider{
-          position:absolute;
-          top:6px;
-          left:6px;
-          width:calc((100% - 12px)/5);
-          height:calc(100% - 12px);
-          background:#1e2d52;
-          border-radius:999px;
-          transition:transform .35s ease;
-          z-index:1;
+        .tab-slider {
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          width: calc((100% - 8px) / 5);
+          height: calc(100% - 8px);
+          background: #1e2d52;
+          border-radius: 100px;
+          transition: transform .35s ease;
+          z-index: 1;
         }
         .prod-tab {
-          flex:1;
-          text-align:center;
+          flex: 1;
+          text-align: center;
           padding: 6px 14px;
           font-size: 10px;
           font-weight: 600;
-          letter-spacing: 0.04em;
+          letter-spacing: .04em;
           color: var(--muted-foreground);
           position: relative;
+          z-index: 2;
           cursor: pointer;
-          z-index:2;
-          user-select: none;
-          border-radius: 100px;
           white-space: nowrap;
-          transition:.3s;
+          border-radius: 100px;
+          user-select: none;
+          -webkit-user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          transition: color .35s ease;
         }
         #tab-all:checked + label,
         #tab-women:checked + label,
         #tab-men:checked + label,
         #tab-accessories:checked + label,
-        #tab-beauty:checked + label{
-          color:#fff;
-        }
-        .prod-tab.active {
-          background: var(--foreground);
+        #tab-beauty:checked + label {
           color: #fff;
-        }
-        #prod-tabs-wrap input[type="radio"]{
-          display:none;
-        }
-        #prod-tabs-wrap input[type="radio"]:checked + .prod-tab{
-          background:#1e2d52;
-          color:#fff;
         }
         #prod-scroll {
           display: flex;
