@@ -2091,6 +2091,7 @@
         </div>
         <div id="prod-tabs-wrap">
           <div id="prod-tabs-inner">
+            
             <input type="radio" name="category" id="tab-all" checked hidden>
             <label for="tab-all" class="prod-tab">All</label>
             <input type="radio" name="category" id="tab-women" hidden>
@@ -2103,6 +2104,15 @@
             <label for="tab-beauty" class="prod-tab">Beauty</label>
           </div>
         </div>
+        <script>
+        const slider=document.querySelector(".tab-slider");
+        const radios=document.querySelectorAll("#prod-tabs-inner input");
+        radios.forEach((radio,index)=>{
+            radio.addEventListener("change",()=>{
+                slider.style.transform=`translateX(${index*100}%)`;
+            });
+        });
+        </script>
         <div id="prod-scroll">
           <div class="prod-card" data-media-type="banani-button">
             <div class="prod-img">
