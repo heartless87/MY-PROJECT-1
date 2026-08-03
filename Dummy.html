@@ -669,9 +669,12 @@
           white-space: nowrap;
           transition:.3s;
         }
-        .prod-tab.active {
-          background: var(--foreground);
-          color: #fff;
+        #tab-all:checked + label,
+        #tab-women:checked + label,
+        #tab-men:checked + label,
+        #tab-accessories:checked + label,
+        #tab-beauty:checked + label{
+          color:#fff;
         }
         #prod-tabs-wrap input[type="radio"]{
           display:none;
