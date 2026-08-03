@@ -2123,12 +2123,23 @@
           </div>
         </div>
         <script>
-        const slider=document.querySelector(".tab-slider");
-        const radios=document.querySelectorAll("#prod-tabs-inner input");
+        const slider = document.querySelector(".tab-slider");
+        const labels = document.querySelectorAll(".prod-tab");
+        const radios = document.querySelectorAll("#prod-tabs-inner input");
+        function moveSlider(index){
+            const label = labels[index];
+            slider.style.width = label.offsetWidth + "px";
+            slider.style.transform = `translateX(${label.offsetLeft - 4}px)`;
+        }
         radios.forEach((radio,index)=>{
+            if(radio.checked) moveSlider(index);
             radio.addEventListener("change",()=>{
-                slider.style.transform=`translateX(${index*100}%)`;
+                moveSlider(index);
             });
+        });
+        window.addEventListener("resize",()=>{
+            const active = [...radios].findIndex(r=>r.checked);
+            moveSlider(active);
         });
         </script>
         <div id="prod-scroll">
