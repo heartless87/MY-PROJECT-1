@@ -1,0 +1,3065 @@
+<div
+  class="export-wrapper"
+  style="
+    width: 100%; max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    font-family: var(--font-family-body);
+    background-color: var(--background);
+  "
+>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=Geist:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=PT+Serif:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Shantell+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>VELUX — Cashmere Rib Sweater</title>
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+      <style id="tokens">
+        :root {
+          --background: #fafaf8;
+          --foreground: #111110;
+          --border: rgba(0, 0, 0, 0.08);
+          --input: #f4f3ef;
+          --primary: #111110;
+          --primary-foreground: #ffffff;
+          --secondary: #f2f1ec;
+          --secondary-foreground: #58574f;
+          --muted: #e8e7e1;
+          --muted-foreground: #8e8d84;
+          --success: #e6f4ee;
+          --success-foreground: #1c7a3e;
+          --accent: #c9a96e;
+          --accent-foreground: #ffffff;
+          --destructive: #fef0ef;
+          --destructive-foreground: #c0392b;
+          --card: #ffffff;
+          --card-foreground: #111110;
+          --radius-sm: 3px;
+          --radius-md: 8px;
+          --radius-lg: 12px;
+          --radius-xl: 20px;
+          --font-family-body: "Inter", system-ui, sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+
+      <style id="base">
+        .export-wrapper {
+          background: var(--background);
+          color: var(--foreground);
+          font-family: var(--font-family-body);
+          font-size: 14px;
+          min-height: 100vh;
+          overflow-x: hidden;
+          padding-bottom: 80px;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      </style>
+
+      <style id="topbar-styles">
+        #topbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 16px;
+          height: 52px;
+          background: rgba(250, 250, 248, 0.97);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border-bottom: 1px solid var(--border);
+          position: sticky;
+          top: 0;
+          z-index: 200;
+        }
+        #topbar-left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        #topbar-back {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: var(--secondary);
+          cursor: pointer;
+          flex-shrink: 0;
+        }
+        #topbar-logo {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        #topbar-logo-mark {
+          width: 24px;
+          height: 24px;
+          background: var(--foreground);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        #topbar-logo-text {
+          font-size: 13px;
+          font-weight: 800;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: var(--foreground);
+        }
+        #topbar-right {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        .topbar-icon-btn {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: var(--secondary);
+          cursor: pointer;
+          position: relative;
+        }
+        .topbar-cart-badge {
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          width: 13px;
+          height: 13px;
+          background: var(--accent);
+          color: #fff;
+          border-radius: 50%;
+          font-size: 7px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
+
+      <style id="breadcrumb-styles">
+        #breadcrumb {
+          padding: 9px 16px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          overflow-x: auto;
+          white-space: nowrap;
+          border-bottom: 1px solid var(--border);
+        }
+        #breadcrumb::-webkit-scrollbar {
+          display: none;
+        }
+        .bc-item {
+          font-size: 10px;
+          color: var(--muted-foreground);
+          cursor: pointer;
+        }
+        .bc-sep {
+          font-size: 9px;
+          color: var(--muted-foreground);
+          opacity: 0.4;
+        }
+        .bc-current {
+          font-size: 10px;
+          color: var(--foreground);
+          font-weight: 600;
+        }
+      </style>
+
+      <style id="gallery-styles">
+        #gallery-section {
+          position: relative;
+          background: var(--muted);
+        }
+        #gallery-main-img {
+          width: 100%;
+          aspect-ratio: 4/5;
+          overflow: hidden;
+          position: relative;
+        }
+        #gallery-main-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        #gallery-badge-new {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          padding: 4px 10px;
+          background: var(--foreground);
+          color: #fff;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          border-radius: 100px;
+        }
+        #gallery-top-actions {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .gallery-action-btn {
+          width: 32px;
+          height: 32px;
+          background: rgba(255, 255, 255, 0.92);
+          backdrop-filter: blur(8px);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        #gallery-dots {
+          position: absolute;
+          bottom: 12px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 4px;
+        }
+        .gnav-dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.4);
+        }
+        .gnav-dot.active {
+          background: #fff;
+          width: 14px;
+          border-radius: 3px;
+        }
+        #gallery-thumbs {
+          display: flex;
+          gap: 6px;
+          padding: 10px 16px;
+          overflow-x: auto;
+          background: var(--background);
+        }
+        #gallery-thumbs::-webkit-scrollbar {
+          display: none;
+        }
+        .gallery-thumb {
+          width: 54px;
+          height: 62px;
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          cursor: pointer;
+          flex-shrink: 0;
+          background: var(--muted);
+          border: 2px solid transparent;
+        }
+        .gallery-thumb.active {
+          border-color: var(--foreground);
+        }
+        .gallery-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
+
+      <style id="product-info-styles">
+        #product-info {
+          padding: 16px 16px 12px;
+          background: var(--background);
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        #pp-eyebrow {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+        #pp-brand-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          padding: 3px 9px;
+          background: var(--secondary);
+          border-radius: 100px;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--secondary-foreground);
+        }
+        #pp-brand-verified {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          font-size: 10px;
+          color: var(--success-foreground);
+          font-weight: 500;
+        }
+        #pp-title {
+          font-size: 22px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.03em;
+          line-height: 1.12;
+        }
+        #pp-rating-price-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+        }
+        #pp-stars-wrap {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        #pp-stars {
+          display: flex;
+          gap: 1px;
+        }
+        #pp-rating-num {
+          font-size: 12px;
+          font-weight: 700;
+          color: var(--foreground);
+        }
+        #pp-review-count {
+          font-size: 10px;
+          color: var(--muted-foreground);
+        }
+        #pp-price {
+          font-size: 24px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.03em;
+        }
+        #pp-stock-sold-row {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        #pp-stock {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        #pp-stock-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #1c7a3e;
+          flex-shrink: 0;
+        }
+        #pp-stock-text {
+          font-size: 11px;
+          color: var(--success-foreground);
+          font-weight: 600;
+        }
+        #pp-stock-urgency {
+          font-size: 10px;
+          color: var(--muted-foreground);
+        }
+        #pp-divider {
+          height: 1px;
+          background: var(--border);
+        }
+      </style>
+
+      <style id="variants-styles">
+        #variants-section {
+          padding: 12px 16px 16px;
+          background: var(--background);
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+        .pp-section-label {
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--muted-foreground);
+          margin-bottom: 8px;
+        }
+        #pp-colors {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .pp-color-swatch {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: 2px solid transparent;
+          flex-shrink: 0;
+        }
+        .pp-color-swatch.active {
+          border-color: var(--foreground);
+          box-shadow:
+            0 0 0 2px var(--background),
+            0 0 0 3.5px var(--foreground);
+        }
+        #pp-color-name {
+          font-size: 11px;
+          color: var(--secondary-foreground);
+          margin-left: 2px;
+        }
+        #pp-sizes {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        .pp-size-btn {
+          min-width: 44px;
+          height: 36px;
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: var(--radius-md);
+          background: var(--secondary);
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--secondary-foreground);
+          cursor: pointer;
+          border: 1.5px solid transparent;
+        }
+        .pp-size-btn.active {
+          background: var(--foreground);
+          color: #fff;
+          border-color: var(--foreground);
+        }
+        .pp-size-btn.oos {
+          opacity: 0.28;
+          cursor: default;
+        }
+        #pp-size-guide {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 11px;
+          color: var(--accent);
+          cursor: pointer;
+          margin-top: 4px;
+          font-weight: 500;
+        }
+        #pp-qty-row {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        #pp-qty-control {
+          display: flex;
+          align-items: center;
+          background: var(--secondary);
+          border-radius: var(--radius-md);
+          overflow: hidden;
+        }
+        .pp-qty-btn {
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        #pp-qty-num {
+          width: 34px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--foreground);
+        }
+        #pp-qty-label {
+          font-size: 10px;
+          color: var(--muted-foreground);
+        }
+      </style>
+
+      <style id="delivery-trust-styles">
+        #delivery-wrap {
+          padding: 0 16px 12px;
+          background: var(--background);
+        }
+        #delivery-section {
+          background: var(--secondary);
+          border-radius: var(--radius-lg);
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+        }
+        #pp-delivery-input-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: var(--card);
+          border-radius: var(--radius-md);
+          padding: 8px 11px;
+          border: 1px solid var(--border);
+        }
+        #pp-delivery-placeholder {
+          flex: 1;
+          font-size: 11px;
+          color: var(--muted-foreground);
+        }
+        #pp-delivery-check {
+          font-size: 10px;
+          font-weight: 700;
+          color: var(--accent);
+          cursor: pointer;
+          white-space: nowrap;
+        }
+        .pp-delivery-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+        }
+        .pp-delivery-icon {
+          width: 26px;
+          height: 26px;
+          background: var(--card);
+          border-radius: var(--radius-md);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .pp-delivery-title {
+          font-size: 11px;
+          font-weight: 600;
+          color: var(--foreground);
+        }
+        .pp-delivery-sub {
+          font-size: 10px;
+          color: var(--muted-foreground);
+          margin-top: 1px;
+        }
+        #trust-badges {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 6px;
+          padding: 0 16px 16px;
+          background: var(--background);
+        }
+        .trust-badge {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          background: var(--secondary);
+          border-radius: var(--radius-md);
+          padding: 8px 10px;
+        }
+        .trust-badge-icon {
+          width: 22px;
+          height: 22px;
+          background: var(--card);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .trust-badge-text {
+          font-size: 10px;
+          font-weight: 600;
+          color: var(--foreground);
+        }
+        .trust-badge-sub {
+          font-size: 9px;
+          color: var(--muted-foreground);
+          margin-top: 1px;
+        }
+      </style>
+
+      <style id="highlights-styles">
+        #highlights-section {
+          padding: 20px 16px 16px;
+          background: var(--background);
+        }
+        .section-eyebrow {
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 3px;
+        }
+        .section-title {
+          font-size: 17px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.03em;
+          margin-bottom: 12px;
+        }
+        .section-title .thin {
+          font-weight: 200;
+          font-style: italic;
+        }
+        #highlights-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .highlight-card {
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+        .highlight-icon {
+          width: 30px;
+          height: 30px;
+          background: rgba(201, 169, 110, 0.1);
+          border-radius: var(--radius-md);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .highlight-title {
+          font-size: 11px;
+          font-weight: 700;
+          color: var(--foreground);
+        }
+        .highlight-desc {
+          font-size: 10px;
+          color: var(--secondary-foreground);
+          line-height: 1.55;
+        }
+      </style>
+
+      <style id="tabs-styles">
+        #details-section {
+          background: var(--background);
+          padding: 0 16px;
+        }
+        #details-tabs {
+          display: flex;
+          border-bottom: 1px solid var(--border);
+          overflow-x: auto;
+        }
+        #details-tabs::-webkit-scrollbar {
+          display: none;
+        }
+        .detail-tab {
+          padding: 11px 13px;
+          font-size: 11px;
+          font-weight: 600;
+          color: var(--muted-foreground);
+          cursor: pointer;
+          border-bottom: 2px solid transparent;
+          margin-bottom: -1px;
+          white-space: nowrap;
+        }
+        .detail-tab.active {
+          color: var(--foreground);
+          border-bottom-color: var(--foreground);
+        }
+        #details-content {
+          padding: 14px 0 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+        .detail-desc-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--foreground);
+          margin-bottom: 7px;
+        }
+        .detail-desc-text {
+          font-size: 11px;
+          color: var(--secondary-foreground);
+          line-height: 1.75;
+          margin-bottom: 8px;
+        }
+        .detail-desc-features {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .detail-feat-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 7px;
+        }
+        .detail-feat-dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: var(--accent);
+          margin-top: 4px;
+          flex-shrink: 0;
+        }
+        .detail-feat-text {
+          font-size: 11px;
+          color: var(--secondary-foreground);
+          line-height: 1.5;
+        }
+        #details-specs {
+          display: flex;
+          flex-direction: column;
+        }
+        .spec-row {
+          display: flex;
+          padding: 8px 0;
+          border-bottom: 1px solid var(--border);
+        }
+        .spec-key {
+          width: 100px;
+          font-size: 10px;
+          font-weight: 600;
+          color: var(--muted-foreground);
+          flex-shrink: 0;
+        }
+        .spec-val {
+          font-size: 11px;
+          color: var(--foreground);
+          font-weight: 500;
+          flex: 1;
+        }
+      </style>
+
+      <style id="reviews-styles">
+        #reviews-section {
+          background: var(--secondary);
+          padding: 20px 16px;
+        }
+        #reviews-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-bottom: 14px;
+          gap: 8px;
+        }
+        #reviews-write-btn {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 7px 11px;
+          background: var(--foreground);
+          color: #fff;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          border-radius: var(--radius-md);
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        #reviews-summary {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          margin-bottom: 12px;
+        }
+        #rev-score-big {
+          font-size: 40px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.05em;
+          line-height: 1;
+          flex-shrink: 0;
+        }
+        #rev-right {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          flex: 1;
+        }
+        #rev-stars-row {
+          display: flex;
+          gap: 2px;
+          margin-bottom: 1px;
+        }
+        #rev-total {
+          font-size: 10px;
+          color: var(--muted-foreground);
+          margin-bottom: 6px;
+        }
+        #rev-bars {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+        .rev-bar-row {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .rev-bar-label {
+          font-size: 9px;
+          color: var(--muted-foreground);
+          width: 26px;
+          text-align: right;
+          flex-shrink: 0;
+        }
+        .rev-bar-track {
+          flex: 1;
+          height: 3px;
+          background: var(--muted);
+          border-radius: 2px;
+          overflow: hidden;
+        }
+        .rev-bar-fill {
+          height: 100%;
+          background: var(--accent);
+          border-radius: 2px;
+        }
+        .rev-bar-pct {
+          font-size: 9px;
+          color: var(--muted-foreground);
+          width: 22px;
+          flex-shrink: 0;
+        }
+        #reviews-filter-row {
+          display: flex;
+          gap: 5px;
+          margin-bottom: 14px;
+          overflow-x: auto;
+        }
+        #reviews-filter-row::-webkit-scrollbar {
+          display: none;
+        }
+        .rev-filter-chip {
+          padding: 5px 11px;
+          background: var(--card);
+          border-radius: 100px;
+          font-size: 10px;
+          font-weight: 500;
+          color: var(--secondary-foreground);
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        .rev-filter-chip.active {
+          background: var(--foreground);
+          color: #fff;
+        }
+        #reviews-list {
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+        }
+        .review-card {
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          padding: 13px;
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+        }
+        .rc-top {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 8px;
+        }
+        .rc-user {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .rc-avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+        .rc-avatar img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .rc-name {
+          font-size: 11px;
+          font-weight: 600;
+          color: var(--foreground);
+        }
+        .rc-verified {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          font-size: 9px;
+          color: var(--success-foreground);
+          margin-top: 2px;
+        }
+        .rc-stars {
+          display: flex;
+          gap: 1px;
+          flex-shrink: 0;
+        }
+        .rc-tag {
+          display: inline-block;
+          padding: 2px 7px;
+          background: var(--secondary);
+          border-radius: 100px;
+          font-size: 9px;
+          font-weight: 600;
+          color: var(--secondary-foreground);
+        }
+        .rc-text {
+          font-size: 11px;
+          color: var(--secondary-foreground);
+          line-height: 1.68;
+        }
+        .rc-footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .rc-date {
+          font-size: 9px;
+          color: var(--muted-foreground);
+        }
+        .rc-helpful {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          font-size: 9px;
+          color: var(--muted-foreground);
+        }
+      </style>
+
+      <style id="fbt-styles">
+        #fbt-section {
+          padding: 20px 16px;
+          background: var(--background);
+        }
+        #fbt-scroll {
+          display: flex;
+          gap: 8px;
+          margin-top: 14px;
+          overflow-x: auto;
+        }
+        #fbt-scroll::-webkit-scrollbar {
+          display: none;
+        }
+        .fbt-card {
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          width: 112px;
+          flex-shrink: 0;
+          cursor: pointer;
+        }
+        .fbt-img {
+          width: 100%;
+          aspect-ratio: 3/4;
+          overflow: hidden;
+          background: var(--muted);
+        }
+        .fbt-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .fbt-body {
+          padding: 7px 8px;
+        }
+        .fbt-brand {
+          font-size: 7px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--muted-foreground);
+          margin-bottom: 2px;
+        }
+        .fbt-name {
+          font-size: 10px;
+          font-weight: 600;
+          color: var(--foreground);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-bottom: 3px;
+        }
+        .fbt-price {
+          font-size: 12px;
+          font-weight: 800;
+          color: var(--foreground);
+        }
+        .fbt-plus {
+          font-size: 16px;
+          font-weight: 300;
+          color: var(--muted-foreground);
+          flex-shrink: 0;
+          align-self: center;
+        }
+        #fbt-total-card {
+          margin-top: 11px;
+          background: var(--secondary);
+          border-radius: var(--radius-lg);
+          padding: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+        }
+        #fbt-total-left {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+        #fbt-total-label {
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--muted-foreground);
+        }
+        #fbt-total-price {
+          font-size: 17px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.02em;
+        }
+        #fbt-total-save {
+          font-size: 10px;
+          color: var(--success-foreground);
+        }
+        #fbt-add-all {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding: 9px 13px;
+          background: var(--foreground);
+          color: #fff;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          border-radius: var(--radius-md);
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+      </style>
+
+      <style id="similar-styles">
+        #similar-section {
+          padding: 20px 16px;
+          background: var(--secondary);
+        }
+        #similar-header {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          margin-bottom: 13px;
+        }
+        .view-all-link {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          font-size: 10px;
+          font-weight: 600;
+          color: var(--secondary-foreground);
+          cursor: pointer;
+          padding: 5px 11px;
+          background: var(--card);
+          border-radius: 100px;
+        }
+        #similar-scroll {
+          display: flex;
+          gap: 8px;
+          overflow-x: auto;
+        }
+        #similar-scroll::-webkit-scrollbar {
+          display: none;
+        }
+        .sim-card {
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          cursor: pointer;
+          flex-shrink: 0;
+          width: 132px;
+        }
+        .sim-img {
+          position: relative;
+          aspect-ratio: 3/4;
+          background: var(--muted);
+          overflow: hidden;
+        }
+        .sim-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .sim-wish {
+          position: absolute;
+          top: 6px;
+          right: 6px;
+          width: 22px;
+          height: 22px;
+          background: rgba(255, 255, 255, 0.92);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .sim-badge {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          padding: 2px 6px;
+          border-radius: 100px;
+          font-size: 7px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+        .sim-badge-new {
+          background: var(--foreground);
+          color: #fff;
+        }
+        .sim-badge-sale {
+          background: var(--destructive);
+          color: var(--destructive-foreground);
+        }
+        .sim-body {
+          padding: 7px 8px 4px;
+        }
+        .sim-brand {
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--muted-foreground);
+          margin-bottom: 2px;
+        }
+        .sim-name {
+          font-size: 11px;
+          font-weight: 500;
+          color: var(--foreground);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-bottom: 3px;
+        }
+        .sim-stars {
+          display: flex;
+          gap: 1px;
+          margin-bottom: 3px;
+        }
+        .sim-price {
+          font-size: 12px;
+          font-weight: 800;
+          color: var(--foreground);
+        }
+        .sim-add-btn {
+          margin: 4px 6px 8px;
+          padding: 6px;
+          background: var(--secondary);
+          border-radius: var(--radius-sm);
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: var(--secondary-foreground);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3px;
+        }
+      </style>
+
+      <style id="seller-styles">
+        #seller-section {
+          padding: 20px 16px;
+          background: var(--background);
+        }
+        #seller-card {
+          background: var(--card);
+          border-radius: var(--radius-xl);
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+          margin-top: 12px;
+        }
+        #seller-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        #seller-logo {
+          width: 42px;
+          height: 42px;
+          border-radius: var(--radius-md);
+          background: var(--secondary);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        #seller-name {
+          font-size: 13px;
+          font-weight: 700;
+          color: var(--foreground);
+          margin-bottom: 2px;
+        }
+        #seller-verified {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          font-size: 10px;
+          color: var(--success-foreground);
+          font-weight: 500;
+        }
+        #seller-stats {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 6px;
+        }
+        .seller-stat {
+          background: var(--secondary);
+          border-radius: var(--radius-md);
+          padding: 8px;
+          text-align: center;
+        }
+        .seller-stat-num {
+          font-size: 13px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.02em;
+        }
+        .seller-stat-lbl {
+          font-size: 8px;
+          color: var(--muted-foreground);
+          margin-top: 1px;
+        }
+        #seller-desc {
+          font-size: 11px;
+          color: var(--secondary-foreground);
+          line-height: 1.7;
+        }
+        #seller-contact-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          padding: 10px;
+          background: var(--secondary);
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--foreground);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        }
+      </style>
+
+      <style id="faq-styles">
+        #faq-section {
+          padding: 0 16px 20px;
+          background: var(--background);
+        }
+        #faq-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--foreground);
+          margin-bottom: 12px;
+          letter-spacing: -0.01em;
+        }
+        .faq-item {
+          border-bottom: 1px solid var(--border);
+          padding: 12px 0;
+        }
+        .faq-item:first-of-type {
+          border-top: 1px solid var(--border);
+        }
+        .faq-q {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          cursor: pointer;
+        }
+        .faq-q-text {
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--foreground);
+          line-height: 1.4;
+        }
+        .faq-icon {
+          flex-shrink: 0;
+        }
+        .faq-a {
+          font-size: 11px;
+          color: var(--secondary-foreground);
+          line-height: 1.7;
+          margin-top: 8px;
+        }
+        .faq-item.open .faq-a {
+          display: block;
+        }
+        .faq-item:not(.open) .faq-a {
+          display: none;
+        }
+      </style>
+
+      <style id="rv-styles">
+        #rv-section {
+          padding: 20px 16px;
+          background: var(--secondary);
+        }
+        #rv-scroll {
+          display: flex;
+          gap: 8px;
+          margin-top: 12px;
+          overflow-x: auto;
+        }
+        #rv-scroll::-webkit-scrollbar {
+          display: none;
+        }
+        .rv-card {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: var(--card);
+          border-radius: var(--radius-lg);
+          padding: 8px;
+          flex-shrink: 0;
+          width: 154px;
+          cursor: pointer;
+        }
+        .rv-img {
+          width: 40px;
+          height: 46px;
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          flex-shrink: 0;
+          background: var(--muted);
+        }
+        .rv-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .rv-brand {
+          font-size: 7px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--muted-foreground);
+          margin-bottom: 2px;
+        }
+        .rv-name {
+          font-size: 10px;
+          font-weight: 500;
+          color: var(--foreground);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-bottom: 3px;
+        }
+        .rv-price {
+          font-size: 11px;
+          font-weight: 800;
+          color: var(--foreground);
+        }
+      </style>
+
+      <style id="footer-styles">
+        #footer {
+          background: var(--foreground);
+          padding: 28px 16px 20px;
+        }
+        #footer-logo {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          margin-bottom: 9px;
+        }
+        #footer-logo-mark {
+          width: 22px;
+          height: 22px;
+          background: var(--accent);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        #footer-logo-text {
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #fff;
+        }
+        #footer-desc {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.28);
+          line-height: 1.7;
+          margin-bottom: 14px;
+        }
+        #footer-social {
+          display: flex;
+          gap: 5px;
+          margin-bottom: 18px;
+        }
+        .fsoc {
+          width: 28px;
+          height: 28px;
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        #footer-links-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 14px;
+          margin-bottom: 18px;
+        }
+        .footer-col-title {
+          font-size: 7px;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.35);
+          margin-bottom: 9px;
+        }
+        .footer-links {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          list-style: none;
+        }
+        .footer-links li a {
+          font-size: 11px;
+          color: rgba(255, 255, 255, 0.26);
+        }
+        #footer-payments {
+          display: flex;
+          gap: 4px;
+          flex-wrap: wrap;
+          margin-bottom: 14px;
+        }
+        .pay-chip {
+          padding: 3px 6px;
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: 3px;
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.28);
+        }
+        #footer-copy {
+          font-size: 10px;
+          color: rgba(255, 255, 255, 0.16);
+          line-height: 1.6;
+        }
+      </style>
+
+      <style id="bottom-bar-styles">
+        #bottom-buy-bar {
+          position: sticky;
+          bottom: 0;
+          z-index: 300;
+          background: rgba(250, 250, 248, 0.97);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border-top: 1px solid var(--border);
+          padding: 10px 16px 12px;
+          display: flex;
+          gap: 8px;
+          align-items: center;
+        }
+        #bottom-buy-price {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-width: 56px;
+          flex-shrink: 0;
+        }
+        #bottom-buy-price-label {
+          font-size: 8px;
+          color: var(--muted-foreground);
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+        }
+        #bottom-buy-price-num {
+          font-size: 16px;
+          font-weight: 800;
+          color: var(--foreground);
+          letter-spacing: -0.02em;
+        }
+        #bottom-wishlist-btn {
+          width: 46px;
+          height: 46px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--secondary);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        }
+        #bottom-add-cart {
+          flex: 1;
+          height: 46px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          background: var(--foreground);
+          color: #fff;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        }
+        #bottom-buy-now {
+          flex: 1;
+          height: 46px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          background: rgba(201, 169, 110, 0.12);
+          border: 1.5px solid var(--accent);
+          color: var(--accent);
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        }
+      </style>
+
+      <style id="gap-styles">
+        .sg {
+          height: 10px;
+          background: var(--background);
+        }
+        .sg-sec {
+          height: 10px;
+          background: var(--secondary);
+        }
+      </style>
+    </head>
+    <body>
+      <!-- TOPBAR -->
+      <div id="topbar">
+        <div id="topbar-left">
+          <div id="topbar-back" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:arrow-left"
+              style="font-size: 15px; color: var(--foreground)"
+            ></iconify-icon>
+          </div>
+          <div id="topbar-logo" data-media-type="banani-button">
+            <div id="topbar-logo-mark">
+              <iconify-icon
+                icon="lucide:gem"
+                style="font-size: 12px; color: #fff"
+              ></iconify-icon>
+            </div>
+            <div id="topbar-logo-text">VELUX</div>
+          </div>
+        </div>
+        <div id="topbar-right">
+          <div class="topbar-icon-btn" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:search"
+              style="font-size: 14px; color: var(--foreground)"
+            ></iconify-icon>
+          </div>
+          <div
+            class="topbar-icon-btn"
+            data-media-type="banani-button"
+            style="position: relative"
+          >
+            <iconify-icon
+              icon="lucide:shopping-bag"
+              style="font-size: 14px; color: var(--foreground)"
+            ></iconify-icon>
+            <div class="topbar-cart-badge">3</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BREADCRUMB -->
+      <div id="breadcrumb">
+        <div class="bc-item" data-media-type="banani-button">Home</div>
+        <div class="bc-sep">/</div>
+        <div class="bc-item" data-media-type="banani-button">Women</div>
+        <div class="bc-sep">/</div>
+        <div class="bc-item" data-media-type="banani-button">Knitwear</div>
+        <div class="bc-sep">/</div>
+        <div class="bc-current">Cashmere Rib Sweater</div>
+      </div>
+
+      <!-- GALLERY -->
+      <div id="gallery-section">
+        <div id="gallery-main-img">
+          <img
+            data-query="ultra luxury cashmere rib knit sweater cream ivory worn by elegant woman soft warm background premium editorial fashion photorealistic"
+            data-aspect-ratio="4:5"
+            alt="Cashmere Rib Sweater main"
+            src="https://storage.googleapis.com/banani-generated-images/generated-images/ec6fbc72-a398-4fb0-8156-15883479c8af.jpg"
+          />
+          <div id="gallery-badge-new">New Arrival</div>
+          <div id="gallery-top-actions">
+            <div class="gallery-action-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:heart"
+                style="font-size: 13px; color: var(--foreground)"
+              ></iconify-icon>
+            </div>
+            <div class="gallery-action-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:share-2"
+                style="font-size: 12px; color: var(--foreground)"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div id="gallery-dots">
+            <div class="gnav-dot active"></div>
+            <div class="gnav-dot"></div>
+            <div class="gnav-dot"></div>
+            <div class="gnav-dot"></div>
+            <div class="gnav-dot"></div>
+          </div>
+        </div>
+        <div id="gallery-thumbs">
+          <div class="gallery-thumb active" data-media-type="banani-button">
+            <img
+              data-query="luxury cashmere rib knit sweater cream ivory front product clean background editorial"
+              data-aspect-ratio="3:4"
+              alt=""
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/33fac15f-380f-4254-9546-d1c3955ced5e.jpg"
+            />
+          </div>
+          <div class="gallery-thumb" data-media-type="banani-button">
+            <img
+              data-query="luxury cashmere rib knit sweater cream back view product editorial minimal"
+              data-aspect-ratio="3:4"
+              alt=""
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/68546d35-fd1e-48da-8e7e-b69eba481567.jpg"
+            />
+          </div>
+          <div class="gallery-thumb" data-media-type="banani-button">
+            <img
+              data-query="luxury cashmere rib knit texture detail close up cream fabric macro premium"
+              data-aspect-ratio="3:4"
+              alt=""
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/721fb7d6-6a43-4338-ad44-ca7d02b8a265.jpg"
+            />
+          </div>
+          <div class="gallery-thumb" data-media-type="banani-button">
+            <img
+              data-query="woman wearing luxury cream cashmere sweater portrait warm studio light editorial fashion"
+              data-aspect-ratio="3:4"
+              alt=""
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/f320c099-7dd5-42d6-b343-bfa26ea23d57.jpg"
+            />
+          </div>
+          <div class="gallery-thumb" data-media-type="banani-button">
+            <img
+              data-query="luxury cashmere sweater folded flat lay cream ivory premium packaging editorial"
+              data-aspect-ratio="3:4"
+              alt=""
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/7bfdf127-6b7f-4bed-8c99-bd7796ba7a2f.jpg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div id="product-info">
+        <div id="pp-eyebrow">
+          <div id="pp-brand-badge" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:gem"
+              style="font-size: 8px; color: var(--accent)"
+            ></iconify-icon>
+            Velour Studio
+          </div>
+          <div id="pp-brand-verified">
+            <iconify-icon
+              icon="lucide:shield-check"
+              style="font-size: 10px; color: var(--success-foreground)"
+            ></iconify-icon>
+            Verified Brand
+          </div>
+        </div>
+
+        <h1 id="pp-title">Cashmere Rib Sweater</h1>
+
+        <div id="pp-rating-price-row">
+          <div id="pp-stars-wrap">
+            <div id="pp-stars">
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 11px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 11px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 11px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 11px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 11px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div id="pp-rating-num">4.9</div>
+            <div id="pp-review-count">(284)</div>
+          </div>
+          <div id="pp-price">$320</div>
+        </div>
+
+        <div id="pp-stock-sold-row">
+          <div id="pp-stock">
+            <div id="pp-stock-dot"></div>
+            <div id="pp-stock-text">In Stock</div>
+          </div>
+          <div id="pp-stock-urgency">Only 7 left · 1,200+ sold</div>
+        </div>
+
+        <div id="pp-divider"></div>
+      </div>
+
+      <!-- VARIANTS -->
+      <div id="variants-section">
+        <div>
+          <div class="pp-section-label">
+            Color —
+            <span
+              style="
+                font-weight: 500;
+                color: var(--foreground);
+                text-transform: none;
+                letter-spacing: 0;
+                font-size: 11px;
+              "
+              >Ivory Cream</span
+            >
+          </div>
+          <div id="pp-colors">
+            <div
+              class="pp-color-swatch active"
+              style="background: #f5f0e8"
+              data-media-type="banani-button"
+            ></div>
+            <div
+              class="pp-color-swatch"
+              style="background: #c8b89a"
+              data-media-type="banani-button"
+            ></div>
+            <div
+              class="pp-color-swatch"
+              style="background: #2c2c2c"
+              data-media-type="banani-button"
+            ></div>
+            <div
+              class="pp-color-swatch"
+              style="background: #8b7b6e"
+              data-media-type="banani-button"
+            ></div>
+            <div
+              class="pp-color-swatch"
+              style="background: #a5b4c4"
+              data-media-type="banani-button"
+            ></div>
+            <div id="pp-color-name">Ivory Cream</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="pp-section-label">Size</div>
+          <div id="pp-sizes">
+            <div class="pp-size-btn oos" data-media-type="banani-button">
+              XS
+            </div>
+            <div class="pp-size-btn" data-media-type="banani-button">S</div>
+            <div class="pp-size-btn active" data-media-type="banani-button">
+              M
+            </div>
+            <div class="pp-size-btn" data-media-type="banani-button">L</div>
+            <div class="pp-size-btn" data-media-type="banani-button">XL</div>
+            <div class="pp-size-btn oos" data-media-type="banani-button">
+              XXL
+            </div>
+          </div>
+          <div id="pp-size-guide" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:ruler"
+              style="font-size: 10px; color: var(--accent)"
+            ></iconify-icon>
+            Size Guide
+          </div>
+        </div>
+
+        <div id="pp-qty-row">
+          <div class="pp-section-label" style="margin-bottom: 0">Qty</div>
+          <div id="pp-qty-control">
+            <div class="pp-qty-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:minus"
+                style="font-size: 12px; color: var(--foreground)"
+              ></iconify-icon>
+            </div>
+            <div id="pp-qty-num">1</div>
+            <div class="pp-qty-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 12px; color: var(--foreground)"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div id="pp-qty-label">Free returns · 30 days</div>
+        </div>
+      </div>
+
+      <!-- DELIVERY -->
+      <div id="delivery-wrap">
+        <div id="delivery-section">
+          <div class="pp-section-label" style="margin-bottom: 2px">
+            Delivery &amp; Returns
+          </div>
+          <div id="pp-delivery-input-row">
+            <iconify-icon
+              icon="lucide:map-pin"
+              style="font-size: 11px; color: var(--muted-foreground)"
+            ></iconify-icon>
+            <div id="pp-delivery-placeholder">
+              Enter pincode for delivery date
+            </div>
+            <div id="pp-delivery-check" data-media-type="banani-button">
+              Check
+            </div>
+          </div>
+          <div class="pp-delivery-item">
+            <div class="pp-delivery-icon">
+              <iconify-icon
+                icon="lucide:truck"
+                style="font-size: 11px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div>
+              <div class="pp-delivery-title">Express Delivery</div>
+              <div class="pp-delivery-sub">
+                Est. Thu, June 19 · Free over $300
+              </div>
+            </div>
+          </div>
+          <div class="pp-delivery-item">
+            <div class="pp-delivery-icon">
+              <iconify-icon
+                icon="lucide:refresh-ccw"
+                style="font-size: 11px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div>
+              <div class="pp-delivery-title">Free Returns</div>
+              <div class="pp-delivery-sub">
+                30-day hassle-free return policy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRUST BADGES -->
+      <div id="trust-badges">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <iconify-icon
+              icon="lucide:shield-check"
+              style="font-size: 11px; color: var(--success-foreground)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="trust-badge-text">Authentic</div>
+            <div class="trust-badge-sub">Certified original</div>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <iconify-icon
+              icon="lucide:lock"
+              style="font-size: 11px; color: var(--success-foreground)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="trust-badge-text">Secure Pay</div>
+            <div class="trust-badge-sub">256-bit SSL</div>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <iconify-icon
+              icon="lucide:award"
+              style="font-size: 11px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="trust-badge-text">2-Yr Warranty</div>
+            <div class="trust-badge-sub">Quality assured</div>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <iconify-icon
+              icon="lucide:gift"
+              style="font-size: 11px; color: var(--accent)"
+            ></iconify-icon>
+          </div>
+          <div>
+            <div class="trust-badge-text">Gift Wrapping</div>
+            <div class="trust-badge-sub">Luxury box</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg"></div>
+
+      <!-- HIGHLIGHTS -->
+      <div id="highlights-section">
+        <div class="section-eyebrow">Product Highlights</div>
+        <div class="section-title">
+          Why You'll <span class="thin">Love It</span>
+        </div>
+        <div id="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <iconify-icon
+                icon="lucide:sparkles"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div class="highlight-title">100% Cashmere</div>
+            <div class="highlight-desc">
+              Grade-A Mongolian fibres, hand-selected for unparalleled softness.
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <iconify-icon
+                icon="lucide:leaf"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div class="highlight-title">Sustainably Made</div>
+            <div class="highlight-desc">
+              Zero-waste manufacturing, Oeko-Tex certified dyes.
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <iconify-icon
+                icon="lucide:thermometer"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div class="highlight-title">All-Season</div>
+            <div class="highlight-desc">
+              Natural temperature regulation for every season.
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <iconify-icon
+                icon="lucide:scissors"
+                style="font-size: 13px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div class="highlight-title">Artisan Craft</div>
+            <div class="highlight-desc">
+              Hand-finished in Florence, Italy. Each piece numbered.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg"></div>
+
+      <!-- DETAILS TABS -->
+      <div id="details-section">
+        <div id="details-tabs">
+          <div class="detail-tab active" data-media-type="banani-button">
+            Description
+          </div>
+          <div class="detail-tab" data-media-type="banani-button">Specs</div>
+          <div class="detail-tab" data-media-type="banani-button">Care</div>
+          <div class="detail-tab" data-media-type="banani-button">Shipping</div>
+        </div>
+        <div id="details-content">
+          <div>
+            <div class="detail-desc-title">The Cashmere Rib Sweater</div>
+            <div class="detail-desc-text">
+              An investment in enduring style. Crafted from the finest Grade-A
+              Mongolian cashmere, delivering an extraordinary balance of
+              lightness and warmth. The ribbed construction offers natural
+              stretch and a flattering silhouette.
+            </div>
+            <div class="detail-desc-features">
+              <div class="detail-feat-item">
+                <div class="detail-feat-dot"></div>
+                <div class="detail-feat-text">
+                  Grade-A Mongolian 2-ply cashmere, 100% pure
+                </div>
+              </div>
+              <div class="detail-feat-item">
+                <div class="detail-feat-dot"></div>
+                <div class="detail-feat-text">
+                  Hand-linked seams for seamless premium finish
+                </div>
+              </div>
+              <div class="detail-feat-item">
+                <div class="detail-feat-dot"></div>
+                <div class="detail-feat-text">
+                  Ribbed crew neck, cuffs and hem
+                </div>
+              </div>
+              <div class="detail-feat-item">
+                <div class="detail-feat-dot"></div>
+                <div class="detail-feat-text">
+                  VELUX signature gift box with dust bag
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="details-specs">
+            <div class="spec-row">
+              <div class="spec-key">Material</div>
+              <div class="spec-val">100% Grade-A Cashmere</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-key">Origin</div>
+              <div class="spec-val">Made in Italy (Florence)</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-key">Fit</div>
+              <div class="spec-val">Relaxed Tailored</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-key">Ply</div>
+              <div class="spec-val">2-Ply Fine Knit</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-key">Weight</div>
+              <div class="spec-val">Lightweight (180g)</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-key">Care</div>
+              <div class="spec-val">Hand wash cold / dry clean</div>
+            </div>
+            <div class="spec-row">
+              <div class="spec-key">Packaging</div>
+              <div class="spec-val">Signature Gift Box + Dust Bag</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg"></div>
+
+      <!-- REVIEWS -->
+      <div id="reviews-section">
+        <div id="reviews-header">
+          <div>
+            <div class="section-eyebrow">Customer Reviews</div>
+            <div class="section-title" style="margin-bottom: 0">
+              What <span class="thin">They Say</span>
+            </div>
+          </div>
+          <div id="reviews-write-btn" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:edit-3"
+              style="font-size: 10px; color: #fff"
+            ></iconify-icon>
+            Review
+          </div>
+        </div>
+        <div id="reviews-summary">
+          <div id="rev-score-big">4.9</div>
+          <div id="rev-right">
+            <div id="rev-stars-row">
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 12px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 12px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 12px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 12px; color: var(--accent)"
+              ></iconify-icon>
+              <iconify-icon
+                icon="lucide:star"
+                style="font-size: 12px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div id="rev-total">284 verified reviews</div>
+            <div id="rev-bars">
+              <div class="rev-bar-row">
+                <div class="rev-bar-label">5 ★</div>
+                <div class="rev-bar-track">
+                  <div class="rev-bar-fill" style="width: 88%"></div>
+                </div>
+                <div class="rev-bar-pct">88%</div>
+              </div>
+              <div class="rev-bar-row">
+                <div class="rev-bar-label">4 ★</div>
+                <div class="rev-bar-track">
+                  <div class="rev-bar-fill" style="width: 8%"></div>
+                </div>
+                <div class="rev-bar-pct">8%</div>
+              </div>
+              <div class="rev-bar-row">
+                <div class="rev-bar-label">3 ★</div>
+                <div class="rev-bar-track">
+                  <div class="rev-bar-fill" style="width: 2%"></div>
+                </div>
+                <div class="rev-bar-pct">2%</div>
+              </div>
+              <div class="rev-bar-row">
+                <div class="rev-bar-label">2 ★</div>
+                <div class="rev-bar-track">
+                  <div class="rev-bar-fill" style="width: 1%"></div>
+                </div>
+                <div class="rev-bar-pct">1%</div>
+              </div>
+              <div class="rev-bar-row">
+                <div class="rev-bar-label">1 ★</div>
+                <div class="rev-bar-track">
+                  <div class="rev-bar-fill" style="width: 1%"></div>
+                </div>
+                <div class="rev-bar-pct">1%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="reviews-filter-row">
+          <div class="rev-filter-chip active" data-media-type="banani-button">
+            All
+          </div>
+          <div class="rev-filter-chip" data-media-type="banani-button">
+            5 Stars
+          </div>
+          <div class="rev-filter-chip" data-media-type="banani-button">
+            4 Stars
+          </div>
+          <div class="rev-filter-chip" data-media-type="banani-button">
+            With Photos
+          </div>
+          <div class="rev-filter-chip" data-media-type="banani-button">
+            Verified
+          </div>
+        </div>
+        <div id="reviews-list">
+          <div class="review-card">
+            <div class="rc-top">
+              <div class="rc-user">
+                <div class="rc-avatar">
+                  <img
+                    src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F25-35%2FEuropean%2F5"
+                    alt="Sophie"
+                  />
+                </div>
+                <div>
+                  <div class="rc-name">Sophie Laurent</div>
+                  <div class="rc-verified">
+                    <iconify-icon
+                      icon="lucide:check-circle"
+                      style="font-size: 9px; color: var(--success-foreground)"
+                    ></iconify-icon>
+                    Verified Purchase
+                  </div>
+                </div>
+              </div>
+              <div class="rc-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="rc-tag">Ivory Cream, Size M</div>
+            <div class="rc-text">
+              "Absolutely worth every penny. The softness is indescribable —
+              nothing close to this quality. The ribbed texture is incredibly
+              refined and packaging was extraordinary."
+            </div>
+            <div class="rc-footer">
+              <div class="rc-date">June 10, 2025</div>
+              <div class="rc-helpful">
+                <iconify-icon
+                  icon="lucide:thumbs-up"
+                  style="font-size: 9px; color: var(--muted-foreground)"
+                ></iconify-icon>
+                Helpful (42)
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="rc-top">
+              <div class="rc-user">
+                <div class="rc-avatar">
+                  <img
+                    src="https://storage.googleapis.com/banani-avatars/avatar%2Fmale%2F35-50%2FMiddle%20Eastern%2F2"
+                    alt="Omar"
+                  />
+                </div>
+                <div>
+                  <div class="rc-name">Omar Al-Hassan</div>
+                  <div class="rc-verified">
+                    <iconify-icon
+                      icon="lucide:check-circle"
+                      style="font-size: 9px; color: var(--success-foreground)"
+                    ></iconify-icon>
+                    Verified Purchase
+                  </div>
+                </div>
+              </div>
+              <div class="rc-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="rc-tag">Black, Size L</div>
+            <div class="rc-text">
+              "Bought as a gift — she was blown away. Beautiful gift box and
+              handwritten note option. VELUX's attention to detail matches the
+              product quality."
+            </div>
+            <div class="rc-footer">
+              <div class="rc-date">June 4, 2025</div>
+              <div class="rc-helpful">
+                <iconify-icon
+                  icon="lucide:thumbs-up"
+                  style="font-size: 9px; color: var(--muted-foreground)"
+                ></iconify-icon>
+                Helpful (38)
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="rc-top">
+              <div class="rc-user">
+                <div class="rc-avatar">
+                  <img
+                    src="https://storage.googleapis.com/banani-avatars/avatar%2Ffemale%2F18-25%2FEast%20Asian%2F3"
+                    alt="Yuki"
+                  />
+                </div>
+                <div>
+                  <div class="rc-name">Yuki Tanaka</div>
+                  <div class="rc-verified">
+                    <iconify-icon
+                      icon="lucide:check-circle"
+                      style="font-size: 9px; color: var(--success-foreground)"
+                    ></iconify-icon>
+                    Verified Purchase
+                  </div>
+                </div>
+              </div>
+              <div class="rc-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 10px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="rc-tag">Ivory Cream, Size S</div>
+            <div class="rc-text">
+              "Drapes beautifully, doesn't pill, feels warmer than any cashmere
+              I own. Premium doesn't begin to describe it."
+            </div>
+            <div class="rc-footer">
+              <div class="rc-date">May 28, 2025</div>
+              <div class="rc-helpful">
+                <iconify-icon
+                  icon="lucide:thumbs-up"
+                  style="font-size: 9px; color: var(--muted-foreground)"
+                ></iconify-icon>
+                Helpful (29)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-sec"></div>
+
+      <!-- FREQUENTLY BOUGHT TOGETHER -->
+      <div id="fbt-section">
+        <div class="section-eyebrow">Frequently Bought Together</div>
+        <div class="section-title">
+          Complete <span class="thin">The Look</span>
+        </div>
+        <div id="fbt-scroll">
+          <div class="fbt-card" data-media-type="banani-button">
+            <div class="fbt-img">
+              <img
+                data-query="luxury cashmere rib knit sweater cream ivory product minimal background premium"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/2021fefc-84d7-400d-ac56-14ee7a58990b.jpg"
+              />
+            </div>
+            <div class="fbt-body">
+              <div class="fbt-brand">Velour Studio</div>
+              <div class="fbt-name">Cashmere Sweater</div>
+              <div class="fbt-price">$320</div>
+            </div>
+          </div>
+          <div class="fbt-plus">+</div>
+          <div class="fbt-card" data-media-type="banani-button">
+            <div class="fbt-img">
+              <img
+                data-query="luxury wide leg tailored trousers cream ivory product minimal background premium editorial"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/c65a60c1-554a-4a90-a95b-db7f6e1cb090.jpg"
+              />
+            </div>
+            <div class="fbt-body">
+              <div class="fbt-brand">Maison Éclat</div>
+              <div class="fbt-name">Wide-Leg Trousers</div>
+              <div class="fbt-price">$480</div>
+            </div>
+          </div>
+          <div class="fbt-plus">+</div>
+          <div class="fbt-card" data-media-type="banani-button">
+            <div class="fbt-img">
+              <img
+                data-query="luxury structured leather tote bag tan product minimal background premium editorial"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/a10b848f-bb44-420c-9522-3a4bf520fcbc.jpg"
+              />
+            </div>
+            <div class="fbt-body">
+              <div class="fbt-brand">Atelier Noir</div>
+              <div class="fbt-name">Leather Tote</div>
+              <div class="fbt-price">$920</div>
+            </div>
+          </div>
+          <div class="fbt-plus">+</div>
+          <div class="fbt-card" data-media-type="banani-button">
+            <div class="fbt-img">
+              <img
+                data-query="luxury suede penny loafer cream gold product minimal background editorial premium"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/4a651375-214b-4e25-a388-26bbb251a053.jpg"
+              />
+            </div>
+            <div class="fbt-body">
+              <div class="fbt-brand">Lumière Paris</div>
+              <div class="fbt-name">Suede Loafer</div>
+              <div class="fbt-price">$590</div>
+            </div>
+          </div>
+        </div>
+        <div id="fbt-total-card">
+          <div id="fbt-total-left">
+            <div id="fbt-total-label">Bundle Total</div>
+            <div id="fbt-total-price">$2,103</div>
+            <div id="fbt-total-save">Save $207 (9% off)</div>
+          </div>
+          <div id="fbt-add-all" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:shopping-cart"
+              style="font-size: 11px; color: #fff"
+            ></iconify-icon>
+            Add All
+          </div>
+        </div>
+      </div>
+
+      <div class="sg"></div>
+
+      <!-- SIMILAR -->
+      <div id="similar-section">
+        <div id="similar-header">
+          <div>
+            <div class="section-eyebrow">You May Also Like</div>
+            <div class="section-title" style="margin-bottom: 0">
+              Similar <span class="thin">Pieces</span>
+            </div>
+          </div>
+          <div class="view-all-link" data-media-type="banani-button">
+            View All
+            <iconify-icon
+              icon="lucide:arrow-right"
+              style="font-size: 10px; color: var(--secondary-foreground)"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div id="similar-scroll">
+          <div class="sim-card" data-media-type="banani-button">
+            <div class="sim-img">
+              <img
+                data-query="luxury wool turtleneck sweater cream premium product white background editorial minimal"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/7106a703-e91b-4d55-a712-a0969f034f79.jpg"
+              />
+              <div class="sim-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 9px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+              <div class="sim-badge sim-badge-new">New</div>
+            </div>
+            <div class="sim-body">
+              <div class="sim-brand">Velour Studio</div>
+              <div class="sim-name">Wool Turtleneck</div>
+              <div class="sim-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="sim-price">$285</div>
+            </div>
+            <div class="sim-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 8px; color: var(--secondary-foreground)"
+              ></iconify-icon>
+              Add
+            </div>
+          </div>
+          <div class="sim-card" data-media-type="banani-button">
+            <div class="sim-img">
+              <img
+                data-query="luxury silk knit cardigan cream product minimal white background editorial premium"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/f2df47eb-c7ea-411c-84a0-18c29a37aef3.jpg"
+              />
+              <div class="sim-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 9px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+              <div class="sim-badge sim-badge-sale">−20%</div>
+            </div>
+            <div class="sim-body">
+              <div class="sim-brand">Château Blanc</div>
+              <div class="sim-name">Silk Cardigan</div>
+              <div class="sim-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="sim-price">$364</div>
+            </div>
+            <div class="sim-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 8px; color: var(--secondary-foreground)"
+              ></iconify-icon>
+              Add
+            </div>
+          </div>
+          <div class="sim-card" data-media-type="banani-button">
+            <div class="sim-img">
+              <img
+                data-query="luxury merino wool crew neck sweater ivory product minimal editorial premium"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/d441c12c-6b4c-411c-8f46-2b6d0aacabe1.jpg"
+              />
+              <div class="sim-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 9px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+              <div class="sim-badge sim-badge-new">New</div>
+            </div>
+            <div class="sim-body">
+              <div class="sim-brand">Maison Éclat</div>
+              <div class="sim-name">Merino Crew Knit</div>
+              <div class="sim-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="sim-price">$195</div>
+            </div>
+            <div class="sim-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 8px; color: var(--secondary-foreground)"
+              ></iconify-icon>
+              Add
+            </div>
+          </div>
+          <div class="sim-card" data-media-type="banani-button">
+            <div class="sim-img">
+              <img
+                data-query="luxury fine alpaca knit sweater grey product minimal white background editorial premium"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/5160420d-9417-4fb3-8960-57a1d4660f14.jpg"
+              />
+              <div class="sim-wish">
+                <iconify-icon
+                  icon="lucide:heart"
+                  style="font-size: 9px; color: var(--muted-foreground)"
+                ></iconify-icon>
+              </div>
+            </div>
+            <div class="sim-body">
+              <div class="sim-brand">Atelier Noir</div>
+              <div class="sim-name">Fine Alpaca Knit</div>
+              <div class="sim-stars">
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="lucide:star"
+                  style="font-size: 8px; color: var(--accent)"
+                ></iconify-icon>
+              </div>
+              <div class="sim-price">$410</div>
+            </div>
+            <div class="sim-add-btn" data-media-type="banani-button">
+              <iconify-icon
+                icon="lucide:plus"
+                style="font-size: 8px; color: var(--secondary-foreground)"
+              ></iconify-icon>
+              Add
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-sec"></div>
+
+      <!-- SELLER -->
+      <div id="seller-section">
+        <div class="section-eyebrow">Sold By</div>
+        <div class="section-title">
+          Seller <span class="thin">Information</span>
+        </div>
+        <div id="seller-card">
+          <div id="seller-header">
+            <div id="seller-logo">
+              <iconify-icon
+                icon="lucide:gem"
+                style="font-size: 18px; color: var(--accent)"
+              ></iconify-icon>
+            </div>
+            <div>
+              <div id="seller-name">Velour Studio Official</div>
+              <div id="seller-verified">
+                <iconify-icon
+                  icon="lucide:shield-check"
+                  style="font-size: 10px; color: var(--success-foreground)"
+                ></iconify-icon>
+                Verified · Since 2018
+              </div>
+            </div>
+          </div>
+          <div id="seller-stats">
+            <div class="seller-stat">
+              <div class="seller-stat-num">4.98</div>
+              <div class="seller-stat-lbl">Rating</div>
+            </div>
+            <div class="seller-stat">
+              <div class="seller-stat-num">8,400+</div>
+              <div class="seller-stat-lbl">Shipped</div>
+            </div>
+            <div class="seller-stat">
+              <div class="seller-stat-num">99.2%</div>
+              <div class="seller-stat-lbl">On-Time</div>
+            </div>
+          </div>
+          <div id="seller-desc">
+            Florence-based luxury knitwear house. Every piece authenticated and
+            shipped with a certificate of origin. Trusted across 80+ countries.
+          </div>
+          <div id="seller-contact-btn" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:message-circle"
+              style="font-size: 13px; color: var(--foreground)"
+            ></iconify-icon>
+            Contact Seller
+          </div>
+        </div>
+      </div>
+
+      <div class="sg"></div>
+
+      <!-- FAQ -->
+      <div id="faq-section">
+        <div class="section-eyebrow">FAQs</div>
+        <div id="faq-title">Frequently Asked Questions</div>
+        <div class="faq-item open">
+          <div class="faq-q" data-media-type="banani-button">
+            <div class="faq-q-text">
+              How should I care for my cashmere sweater?
+            </div>
+            <div class="faq-icon">
+              <iconify-icon
+                icon="lucide:chevron-up"
+                style="font-size: 14px; color: var(--muted-foreground)"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div class="faq-a">
+            Dry clean or hand wash in cold water with cashmere detergent. Lay
+            flat to dry. Store folded in the dust bag.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-media-type="banani-button">
+            <div class="faq-q-text">How does the sizing run?</div>
+            <div class="faq-icon">
+              <iconify-icon
+                icon="lucide:chevron-down"
+                style="font-size: 14px; color: var(--muted-foreground)"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div class="faq-a">
+            True to size with a relaxed-tailored fit. Model is 5'9" wearing size
+            M.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-media-type="banani-button">
+            <div class="faq-q-text">Is the product fully authenticated?</div>
+            <div class="faq-icon">
+              <iconify-icon
+                icon="lucide:chevron-down"
+                style="font-size: 14px; color: var(--muted-foreground)"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div class="faq-a">
+            Yes — 12-point authentication, numbered certificate, holographic
+            seal and digital QR code included.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" data-media-type="banani-button">
+            <div class="faq-q-text">Can I return or exchange?</div>
+            <div class="faq-icon">
+              <iconify-icon
+                icon="lucide:chevron-down"
+                style="font-size: 14px; color: var(--muted-foreground)"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div class="faq-a">
+            Free 30-day returns with prepaid label included in package.
+          </div>
+        </div>
+      </div>
+
+      <div class="sg"></div>
+
+      <!-- RECENTLY VIEWED -->
+      <div id="rv-section">
+        <div
+          style="
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 4px;
+          "
+        >
+          <div>
+            <div class="section-eyebrow">Recently Viewed</div>
+            <div class="section-title" style="margin-bottom: 0">
+              Continue <span class="thin">Browsing</span>
+            </div>
+          </div>
+          <div class="view-all-link" data-media-type="banani-button">
+            Clear
+            <iconify-icon
+              icon="lucide:x"
+              style="font-size: 9px; color: var(--secondary-foreground)"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div id="rv-scroll">
+          <div class="rv-card" data-media-type="banani-button">
+            <div class="rv-img">
+              <img
+                data-query="luxury suede ankle boot product white background minimal premium"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/3397272d-e02b-424e-a420-7eba7604404c.jpg"
+              />
+            </div>
+            <div>
+              <div class="rv-brand">Lumière Paris</div>
+              <div class="rv-name">Suede Ankle Boot</div>
+              <div class="rv-price">$695</div>
+            </div>
+          </div>
+          <div class="rv-card" data-media-type="banani-button">
+            <div class="rv-img">
+              <img
+                data-query="luxury silk slip dress cream product white background minimal editorial"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/695d1971-8d81-4408-a90d-3c586d95c591.jpg"
+              />
+            </div>
+            <div>
+              <div class="rv-brand">Maison Éclat</div>
+              <div class="rv-name">Silk Charmeuse Slip</div>
+              <div class="rv-price">$485</div>
+            </div>
+          </div>
+          <div class="rv-card" data-media-type="banani-button">
+            <div class="rv-img">
+              <img
+                data-query="luxury leather tote bag tan product white background minimal premium"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/e3c9ac4c-5234-4e78-ac36-3f68337c24e0.jpg"
+              />
+            </div>
+            <div>
+              <div class="rv-brand">Atelier Noir</div>
+              <div class="rv-name">Structured Tote</div>
+              <div class="rv-price">$920</div>
+            </div>
+          </div>
+          <div class="rv-card" data-media-type="banani-button">
+            <div class="rv-img">
+              <img
+                data-query="luxury diamond gold drop earrings jewelry product white background elegant"
+                data-aspect-ratio="3:4"
+                alt=""
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/24f568fb-7064-4e94-9cfb-672d94d9e9aa.jpg"
+              />
+            </div>
+            <div>
+              <div class="rv-brand">Obsidian Co.</div>
+              <div class="rv-name">Diamond Earrings</div>
+              <div class="rv-price">$2,800</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer id="footer">
+        <div id="footer-logo">
+          <div id="footer-logo-mark">
+            <iconify-icon
+              icon="lucide:gem"
+              style="font-size: 11px; color: #fff"
+            ></iconify-icon>
+          </div>
+          <div id="footer-logo-text">VELUX</div>
+        </div>
+        <div id="footer-desc">
+          The world's most trusted luxury marketplace. Authenticated with care,
+          delivered to 120+ countries.
+        </div>
+        <div id="footer-social">
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:instagram"
+              style="font-size: 12px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:twitter"
+              style="font-size: 12px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:youtube"
+              style="font-size: 12px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+          <div class="fsoc" data-media-type="banani-button">
+            <iconify-icon
+              icon="lucide:linkedin"
+              style="font-size: 12px; color: rgba(255, 255, 255, 0.4)"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div id="footer-links-grid">
+          <div>
+            <div class="footer-col-title">Shop</div>
+            <ul class="footer-links">
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Sale</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Support</div>
+            <ul class="footer-links">
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Sizing Guide</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-links">
+              <li><a href="#">About VELUX</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Sustainability</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Membership</div>
+            <ul class="footer-links">
+              <li><a href="#">VELUX Elite</a></li>
+              <li><a href="#">Early Access</a></li>
+              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#">Loyalty Points</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="footer-payments">
+          <div class="pay-chip">Visa</div>
+          <div class="pay-chip">Mastercard</div>
+          <div class="pay-chip">Amex</div>
+          <div class="pay-chip">PayPal</div>
+          <div class="pay-chip">Apple Pay</div>
+          <div class="pay-chip">G Pay</div>
+        </div>
+        <div id="footer-copy">
+          © 2025 VELUX. All rights reserved. · Privacy · Terms
+        </div>
+      </footer>
+
+      <!-- STICKY BOTTOM BUY BAR -->
+      <div id="bottom-buy-bar">
+        <div id="bottom-buy-price">
+          <div id="bottom-buy-price-label">Price</div>
+          <div id="bottom-buy-price-num">$320</div>
+        </div>
+        <div id="bottom-wishlist-btn" data-media-type="banani-button">
+          <iconify-icon
+            icon="lucide:heart"
+            style="font-size: 17px; color: var(--foreground)"
+          ></iconify-icon>
+        </div>
+        <div id="bottom-add-cart" data-media-type="banani-button">
+          <iconify-icon
+            icon="lucide:shopping-bag"
+            style="font-size: 14px; color: #fff"
+          ></iconify-icon>
+          Add to Cart
+        </div>
+        <div id="bottom-buy-now" data-media-type="banani-button">
+          <iconify-icon
+            icon="lucide:zap"
+            style="font-size: 13px; color: var(--accent)"
+          ></iconify-icon>
+          Buy Now
+        </div>
+      </div>
+    </body>
+  </html>
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+  <style>
+    :root {
+      --background: #f7f7f7;
+      --foreground: #1e2d52;
+      --border: #d9dde5;
+      --input: #ffffff;
+      --primary: #1e2d52;
+      --primary-foreground: #ffffff;
+      --secondary: #f4e3cf;
+      --secondary-foreground: #1e2d52;
+      --muted: #eef1f5;
+      --muted-foreground: #5e6472;
+      --success: #2e7d32;
+      --success-foreground: #ffffff;
+      --accent: #c8a96a;
+      --accent-foreground: #ffffff;
+      --destructive: #d32f2f;
+      --destructive-foreground: #ffffff;
+      --warning: #f59e0b;
+      --warning-foreground: #ffffff;
+      --card: #ffffff;
+      --card-foreground: #1e2d52;
+      --sidebar: #1e2d52;
+      --sidebar-foreground: #ffffff;
+      --sidebar-primary: #c8a96a;
+      --sidebar-primary-foreground: #ffffff;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+      --radius-lg: 6px;
+      --radius-xl: 10px;
+      --font-family-body: Inter;
+    }
+  </style>
+</div>
