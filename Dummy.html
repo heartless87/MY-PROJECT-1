@@ -1333,76 +1333,20 @@
         }
       </style>
 <style id="bottomnav-styles">
-        #bottomnav {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(250, 250, 248, 0.97);
-          backdrop-filter: blur(20px);
-          border-top: 1px solid var(--border);
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-          padding: 10px 0 13px;
-          z-index: 200;
-        }
+        #bottomnav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(250, 250, 248, 0.97); backdrop-filter: blur(20px); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-around; padding: 10px 0 13px; z-index: 200; }
         @media (min-width: 768px) {
           #bottomnav { display: none; }
+          .topbar_search-icon { display: none;}
+          .input-search-bar{  display: flex; align-items: center; background-color: #f4e3cf; border: none; border-radius: 50px; padding: 0 14px; height: 40px; width: clamp(120px, 16.6vw, 280px); box-sizing: border-box; }
+          .input-search-icon{ width: 16px; height: 16px; flex-shrink: 0; background: transparent; }
+          .input-search-bar input{ flex: 1; background: transparent; border: none; outline: none; padding-left: 10px; color: #222; font-size: 14px; }
         }
-        .bnav-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 3px;
-          cursor: pointer;
-          flex: 1;
-        }
-        .bnav-icon {
-          width: 24px;
-          height: 24px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-        }
-        .bnav-lbl {
-          font-size: 9px;
-          font-weight: 600;
-          color: var(--muted-foreground);
-          white-space: nowrap;
-        }
-        .bnav-item.active .bnav-lbl {
-          color: var(--foreground);
-        }
-        .bnav-badge {
-          position: absolute;
-          top: -2px;
-          right: -3px;
-          width: 13px;
-          height: 13px;
-          background: var(--accent);
-          color: #fff;
-          border-radius: 50%;
-          font-size: 7px;
-          font-weight: 700;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .bnav-center {
-          width: 46px;
-          height: 46px;
-          background: var(--foreground);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          cursor: pointer;
-          margin-top: -20px;
-          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
-        }
+        .bnav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer; flex: 1; }
+        .bnav-icon { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; position: relative; }
+        .bnav-lbl { font-size: 9px; font-weight: 600; color: var(--muted-foreground); white-space: nowrap; }
+        .bnav-item.active .bnav-lbl { color: var(--foreground); }
+        .bnav-badge { position: absolute; top: -2px; right: -3px; width: 13px; height: 13px; background: var(--accent); color: #fff; border-radius: 50%; font-size: 7px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+        .bnav-center { width: 46px; height: 46px; background: var(--foreground); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer; margin-top: -20px; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22); }
       </style>
 <style>
     :root {
