@@ -43,125 +43,26 @@
           --radius-xl: 20px;
           --font-family-body: "Inter", system-ui, sans-serif;
         }
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
       </style>
 <style id="base">
-        .export-wrapper {
-          background: var(--background);
-          color: var(--foreground);
-          font-family: var(--font-family-body);
-          font-size: 14px;
-          min-height: 812px;
-          overflow-x: hidden;
-        }
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
-        img {
-          display: block;
-        }
+        .export-wrapper { background: var(--background); color: var(--foreground); font-family: var(--font-family-body); font-size: 14px; min-height: 812px; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        img { display: block; }
       </style>
 <style id="topbar-styles">
-        #topbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0;
-          width: 100%;
-          padding: 0 2rem;
-          height: 56px;
-          background: var(--background);
-          border-bottom: 1px solid var(--border);
-          position: relative;
-          box-sizing: border-box;
-          z-index: 100;
-        }
-        #topbar-logo {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-        #topbar-logo-mark {
-          width: 30px;
-          height: 30px;
-          background: var(--foreground);
-          border-radius: 7px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        #topbar-logo-text {
-          font-size: 16px;
-          font-weight: 800;
-          letter-spacing: 0.24em;
-          color: var(--foreground);
-          text-transform: uppercase;
-        }
-        #topbar-right {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
-        .topbar-icon-btn {
-          width: 36px;
-          height: 36px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          cursor: pointer;
-          position: relative;
-        }
-        .topbar-cart-badge {
-          position: absolute;
-          top: 3px;
-          right: 3px;
-          width: 14px;
-          height: 14px;
-          background: var(--accent);
-          color: #fff;
-          border-radius: 50%;
-          font-size: 7px;
-          font-weight: 700;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      </style>
-<style id="announce-styles">
-        #announce-bar {
-          background: var(--foreground);
-          padding: 9px 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 6px;
-        }
-        #announce-dot {
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          background: var(--accent);
-          flex-shrink: 0;
-        }
-        #announce-text {
-          font-size: 10px;
-          font-weight: 600;
-          color: rgba(255, 255, 255, 0.8);
-          letter-spacing: 0.06em;
-          white-space: nowrap;
-        }
-        #announce-accent {
-          font-size: 10px;
-          font-weight: 700;
-          color: var(--accent);
-          white-space: nowrap;
-        }
+        #topbar { display: flex; align-items: center; justify-content: space-between; margin: 0; width: 100%; padding: 0 2rem; height: 56px; background: var(--background); border-bottom: 1px solid var(--border); position: relative; box-sizing: border-box; z-index: 100; }
+        #topbar-logo { display: flex; align-items: center; gap: 8px; }
+        #topbar-logo-mark { width: 30px; height: 30px; background: var(--foreground); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+        #topbar-logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.24em; color: var(--foreground); text-transform: uppercase; }
+        #topbar-right { display: flex; align-items: center; gap: 6px; }
+        .input-search-bar { display: none; }
+        .topbar-icon-btn { width: clamp(36px, 4vw, 44px); height: clamp(36px, 4vw, 44px); border-radius: 50%; background-color: #f4e3cf; display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative; }
+        .topbar-icon-btn img { width: 20px; height: 20px; object-fit: contain; }
+        .badge { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; line-height: 1; }
+        .join-now-btn { height: clamp(36px, 4vw, 44px); padding: 0 clamp(14px, 1.5vw, 20px); display: flex; align-items: center; justify-content: center; gap: 9px; background-color: #243452; color: #ffffff; border-radius: 20px; text-decoration: none; font-size: clamp(13px, 1.2vw, 17px); font-family: var(--font-family-body); font-weight: 500; white-space: nowrap; cursor: pointer; }
+        .join-now-btn img { height: 21px; width: 21px; object-fit: contain; flex-shrink: 0; filter: invert(55.66%) sepia(55.25%) saturate(768.87%) hue-rotate(2deg) brightness(285.55%) contrast(13.36%); }
+        .join-now-btn span { line-height: 1; } 
       </style>
 <style id="hero-styles">
         #hero {
