@@ -3707,6 +3707,170 @@
         moveModeIndicator(tab, true);
       });
     });
-    </script>  
+    </script> 
+    <!-- signin country selection -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const countrySelect = document.getElementById("countrySelect");
+      const countryDropdown = document.getElementById("countryDropdown");
+      const countrySearch = document.getElementById("countrySearch");
+      const countryList = document.getElementById("countryList");
+      const selectedFlag = document.getElementById("selectedFlag");
+      const selectedCountry = document.getElementById("selectedCountry");
+      const selectedCode = document.getElementById("selectedCode");
+      const countryOptions = document.querySelectorAll(".country-option");
+      countrySelect.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const isOpen = countryDropdown.classList.contains("open");
+        countryDropdown.classList.toggle("open", !isOpen);
+        countrySelect.classList.toggle("open", !isOpen);
+        if (!isOpen) {
+          setTimeout(() => {
+            countrySearch.focus();
+          }, 100);
+        }
+      });
+      countryOptions.forEach(function (option) {
+        option.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const country = this.dataset.country;
+          const code = this.dataset.code;
+          const flag = this.dataset.flag;
+          selectedCountry.textContent = country;
+          selectedCode.textContent = code;
+          selectedFlag.textContent = flag;
+          countryOptions.forEach(function (item) {
+            item.classList.remove("selected");
+          });
+          this.classList.add("selected");
+          countryDropdown.classList.remove("open");
+          countrySelect.classList.remove("open");
+          countrySearch.value = "";
+          countryOptions.forEach(function (item) {
+            item.style.display = "flex";
+          });
+          document.querySelectorAll(".country-section-title").forEach(function (title) {
+            title.style.display = "";
+          });
+        });
+      });
+      countrySearch.addEventListener("input", function () {
+        const searchValue = this.value.toLowerCase().trim();
+        let visibleCount = 0;
+        countryOptions.forEach(function (option) {
+          const countryName =
+            option.dataset.country.toLowerCase();
+          if (countryName.includes(searchValue)) {
+            option.style.display = "flex";
+            visibleCount++;
+          } else {
+            option.style.display = "none";
+          }
+        });
+        document.querySelectorAll(".country-section-title").forEach(function (title) {
+          if (searchValue !== "") {
+            title.style.display = "none";
+          } else {
+            title.style.display = "";
+          }
+        });
+        let noResult =
+          document.querySelector(".country-no-result");
+        if (visibleCount === 0 && searchValue !== "") {
+          if (!noResult) {
+            noResult = document.createElement("div");
+            noResult.className = "country-no-result";
+            noResult.textContent = "No country found";
+            countryList.appendChild(noResult);
+          }
+        } else {
+          if (noResult) {
+            noResult.remove();
+          }
+        }
+      });
+      document.addEventListener("click", function (e) {
+        if (!countrySelect.contains(e.target) &&
+            !countryDropdown.contains(e.target)) {
+          countryDropdown.classList.remove("open");
+          countrySelect.classList.remove("open");
+        }
+      });
+    });
+    </script> 
+    <!-- password eye hidder   -->
+    <script>
+    const passwordInput = document.getElementById("login-password");
+    const passwordToggle = document.getElementById("password-toggle");
+    let realPassword = "";
+    let revealTimer = null;
+    let showingPassword = false;
+    function updatePasswordDisplay() {
+      if (showingPassword) {
+        passwordInput.value = realPassword;
+        return;
+      }
+      if (realPassword.length === 0) {
+        passwordInput.value = "";
+        return;
+      }
+      const hiddenPart = "•".repeat(Math.max(0, realPassword.length - 1));
+      const lastCharacter = realPassword.slice(-1);
+      passwordInput.value = hiddenPart + lastCharacter;
+    }
+    passwordInput.addEventListener("keydown", function (e) {
+      if (e.key === "Backspace") {
+        e.preventDefault();
+        realPassword = realPassword.slice(0, -1);
+        updatePasswordDisplay();
+        return;
+      }
+      if (e.key === "Delete") {
+        e.preventDefault();
+        realPassword = "";
+        updatePasswordDisplay();
+        return;
+      }
+      if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+        realPassword += e.key;
+        if (showingPassword) {
+          passwordInput.value = realPassword;
+          return;
+        }
+        updatePasswordDisplay();
+        clearTimeout(revealTimer);
+        revealTimer = setTimeout(() => {
+          updatePasswordDisplay();
+        }, 800);
+      }
+    });
+    passwordToggle.addEventListener("change", function () {
+      if (this.checked) {
+        showingPassword = false;
+        updatePasswordDisplay();
+      } else {
+        showingPassword = true;
+        clearTimeout(revealTimer);
+        passwordInput.value = realPassword;
+      }
+      passwordInput.focus();
+    });
+    passwordInput.addEventListener("paste", function (e) {
+      e.preventDefault();
+      const pastedText = e.clipboardData.getData("text");
+      realPassword += pastedText;
+      updatePasswordDisplay();
+      clearTimeout(revealTimer);
+      if (!showingPassword) {
+        revealTimer = setTimeout(() => {
+          updatePasswordDisplay();
+        }, 800);
+      }
+    });
+    passwordInput.form?.addEventListener("submit", function () {
+      passwordInput.value = realPassword;
+    });
+    </script>
 </body>
 </html>
