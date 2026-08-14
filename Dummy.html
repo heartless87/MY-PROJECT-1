@@ -3458,15 +3458,302 @@
           </div>
           <div class="form-group">
             <div class="fgroup-label">Country / Region</div>
-            <div class="country-select" data-media-type="banani-button">
-              <div class="cs-flag">🇮🇳</div>
-              <div class="cs-name">India</div>
-              <div class="cs-code">+91</div>
-              <div class="cs-chev">
-                <iconify-icon
-                  icon="lucide:chevron-down"
-                  style="font-size: 12px; color: var(--muted-foreground)"
-                ></iconify-icon>
+            <div class="country-wrapper">
+              <div class="country-select" id="countrySelect">
+                <div class="cs-flag" id="selectedFlag">🇮🇳</div>
+                <div class="cs-name" id="selectedCountry">India</div>
+                <div class="cs-code" id="selectedCode">+91</div>
+
+                <div class="cs-chev" id="countryChevron">
+                  <iconify-icon
+                    icon="lucide:chevron-down"
+                    style="font-size: 12px; color: var(--muted-foreground)"
+                  ></iconify-icon>
+                </div>
+              </div>
+              <div class="country-dropdown" id="countryDropdown">
+
+                <!-- Search -->
+                <div class="country-search">
+                  <iconify-icon
+                    icon="lucide:search"
+                    style="font-size: 15px;"
+                  ></iconify-icon>
+
+                  <input
+                    type="text"
+                    id="countrySearch"
+                    placeholder="Select your country / region"
+                    autocomplete="off"
+                  >
+                </div>
+
+                <!-- Countries -->
+                <div class="country-list" id="countryList">
+
+                  <div class="country-section-title">POPULAR</div>
+
+                  <div class="country-option selected"
+                      data-country="India"
+                      data-code="+91"
+                      data-flag="🇮🇳">
+                    <span class="country-flag">🇮🇳</span>
+                    <span class="country-name">India</span>
+                    <span class="country-radio">
+                      <span class="radio-dot"></span>
+                    </span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="United States"
+                      data-code="+1"
+                      data-flag="🇺🇸">
+                    <span class="country-flag">🇺🇸</span>
+                    <span class="country-name">United States</span>
+                    <span class="country-radio">
+                      <span class="radio-dot"></span>
+                    </span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="United Kingdom"
+                      data-code="+44"
+                      data-flag="🇬🇧">
+                    <span class="country-flag">🇬🇧</span>
+                    <span class="country-name">United Kingdom</span>
+                    <span class="country-radio">
+                      <span class="radio-dot"></span>
+                    </span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="United Arab Emirates"
+                      data-code="+971"
+                      data-flag="🇦🇪">
+                    <span class="country-flag">🇦🇪</span>
+                    <span class="country-name">United Arab Emirates</span>
+                    <span class="country-radio">
+                      <span class="radio-dot"></span>
+                    </span>
+                  </div>
+
+                  <div class="country-section-title all-title">ALL COUNTRIES</div>
+
+                  <div class="country-option"
+                      data-country="Afghanistan"
+                      data-code="+93"
+                      data-flag="🇦🇫">
+                    <span class="country-flag">🇦🇫</span>
+                    <span class="country-name">Afghanistan</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Australia"
+                      data-code="+61"
+                      data-flag="🇦🇺">
+                    <span class="country-flag">🇦🇺</span>
+                    <span class="country-name">Australia</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Bangladesh"
+                      data-code="+880"
+                      data-flag="🇧🇩">
+                    <span class="country-flag">🇧🇩</span>
+                    <span class="country-name">Bangladesh</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Brazil"
+                      data-code="+55"
+                      data-flag="🇧🇷">
+                    <span class="country-flag">🇧🇷</span>
+                    <span class="country-name">Brazil</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Canada"
+                      data-code="+1"
+                      data-flag="🇨🇦">
+                    <span class="country-flag">🇨🇦</span>
+                    <span class="country-name">Canada</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="China"
+                      data-code="+86"
+                      data-flag="🇨🇳">
+                    <span class="country-flag">🇨🇳</span>
+                    <span class="country-name">China</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="France"
+                      data-code="+33"
+                      data-flag="🇫🇷">
+                    <span class="country-flag">🇫🇷</span>
+                    <span class="country-name">France</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Germany"
+                      data-code="+49"
+                      data-flag="🇩🇪">
+                    <span class="country-flag">🇩🇪</span>
+                    <span class="country-name">Germany</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Indonesia"
+                      data-code="+62"
+                      data-flag="🇮🇩">
+                    <span class="country-flag">🇮🇩</span>
+                    <span class="country-name">Indonesia</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Italy"
+                      data-code="+39"
+                      data-flag="🇮🇹">
+                    <span class="country-flag">🇮🇹</span>
+                    <span class="country-name">Italy</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Japan"
+                      data-code="+81"
+                      data-flag="🇯🇵">
+                    <span class="country-flag">🇯🇵</span>
+                    <span class="country-name">Japan</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Malaysia"
+                      data-code="+60"
+                      data-flag="🇲🇾">
+                    <span class="country-flag">🇲🇾</span>
+                    <span class="country-name">Malaysia</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Nepal"
+                      data-code="+977"
+                      data-flag="🇳🇵">
+                    <span class="country-flag">🇳🇵</span>
+                    <span class="country-name">Nepal</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="New Zealand"
+                      data-code="+64"
+                      data-flag="🇳🇿">
+                    <span class="country-flag">🇳🇿</span>
+                    <span class="country-name">New Zealand</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Pakistan"
+                      data-code="+92"
+                      data-flag="🇵🇰">
+                    <span class="country-flag">🇵🇰</span>
+                    <span class="country-name">Pakistan</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Russia"
+                      data-code="+7"
+                      data-flag="🇷🇺">
+                    <span class="country-flag">🇷🇺</span>
+                    <span class="country-name">Russia</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Saudi Arabia"
+                      data-code="+966"
+                      data-flag="🇸🇦">
+                    <span class="country-flag">🇸🇦</span>
+                    <span class="country-name">Saudi Arabia</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Singapore"
+                      data-code="+65"
+                      data-flag="🇸🇬">
+                    <span class="country-flag">🇸🇬</span>
+                    <span class="country-name">Singapore</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="South Africa"
+                      data-code="+27"
+                      data-flag="🇿🇦">
+                    <span class="country-flag">🇿🇦</span>
+                    <span class="country-name">South Africa</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="South Korea"
+                      data-code="+82"
+                      data-flag="🇰🇷">
+                    <span class="country-flag">🇰🇷</span>
+                    <span class="country-name">South Korea</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Spain"
+                      data-code="+34"
+                      data-flag="🇪🇸">
+                    <span class="country-flag">🇪🇸</span>
+                    <span class="country-name">Spain</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Sri Lanka"
+                      data-code="+94"
+                      data-flag="🇱🇰">
+                    <span class="country-flag">🇱🇰</span>
+                    <span class="country-name">Sri Lanka</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+
+                  <div class="country-option"
+                      data-country="Thailand"
+                      data-code="+66"
+                      data-flag="🇹🇭">
+                    <span class="country-flag">🇹🇭</span>
+                    <span class="country-name">Thailand</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+                  <div class="country-option"
+                      data-country="Turkey"
+                      data-code="+90"
+                      data-flag="🇹🇷">
+                    <span class="country-flag">🇹🇷</span>
+                    <span class="country-name">Turkey</span>
+                    <span class="country-radio"><span class="radio-dot"></span></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
