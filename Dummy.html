@@ -367,6 +367,7 @@
     overflow: hidden !important;
   }
 </style>
+
 <style id="screen-layout">
     #screen-wrap { display: none; position: fixed; flex-direction: column; min-height: 812px; left: 0;
     bottom: 0;
@@ -563,205 +564,38 @@
       font-weight: 600;
     }
   </style>
-
   <style id="form-styles">
     /* ── Bottom form half ── */
-    #form-half {
-      flex: 1;
-      background: var(--background);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      position: relative;
-    }
-
+    #form-half { flex: 1; background: var(--background); display: flex; flex-direction: column; overflow: hidden; position: relative; }
     /* Notch / connector */
-    #form-notch {
-      height: 32px;
-      background: var(--foreground);
-      border-radius: 0 0 28px 28px;
-      flex-shrink: 0;
-    }
-    #form-notch-inner {
-      background: var(--background);
-      height: 32px;
-      border-radius: 28px 28px 0 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 10px;
-    }
-    #notch-handle {
-      width: 36px;
-      height: 4px;
-      background: var(--muted);
-      border-radius: 100px;
-    }
-
+    #form-notch { height: 32px; background: var(--foreground); border-radius: 0 0 28px 28px; flex-shrink: 0; }
+    #form-notch-inner { background: var(--background); height: 32px; border-radius: 28px 28px 0 0; display: flex; align-items: flex-start; justify-content: center; padding-top: 10px; }
+    #notch-handle { width: 36px; height: 4px; background: var(--muted); border-radius: 100px; }
     /* Mode switcher — segmented like tabs at top */
     .mode-tab.active { color: var(--foreground); }
-    #mode-tabs {
-      display: flex;
-      gap: 0;
-      margin: 0 20px 18px;
-      border-bottom: 2px solid var(--muted);
-      flex-shrink: 0;
-      position: relative;
-      font-family: var(--font-family-body);
-    }
-    .mode-tab {
-      flex: 1;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 10px 8px 12px;
-      color: var(--muted-foreground);
-      cursor: pointer;
-      letter-spacing: 0.02em;
-      position: relative;
-      white-space: nowrap;
-    }
-    #mode-indicator {
-      position: absolute;
-      bottom: -2px;
-      height: 2px;
-      width: 30%;
-      background: var(--accent);
-      border-radius: 2px 2px 0 0;
-      left: 10%;
-      transition:
-        left 0.42s cubic-bezier(0.65, 0, 0.35, 1),
-        width 0.42s cubic-bezier(0.65, 0, 0.35, 1);
-      pointer-events: none;
-    }
+    #mode-tabs { display: flex; gap: 0; margin: 0 20px 18px; border-bottom: 2px solid var(--muted); flex-shrink: 0; position: relative; font-family: var(--font-family-body); }
+    .mode-tab { flex: 1; text-align: center; font-size: 13px; font-weight: 700; padding: 10px 8px 12px; color: var(--muted-foreground); cursor: pointer; letter-spacing: 0.02em; position: relative; white-space: nowrap; }
+    #mode-indicator { position: absolute; bottom: -2px; height: 2px; width: 30%; background: var(--accent); border-radius: 2px 2px 0 0; left: 10%; transition: left 0.42s cubic-bezier(0.65, 0, 0.35, 1), width 0.42s cubic-bezier(0.65, 0, 0.35, 1); pointer-events: none; }
     /* Scrollable form body */
-    #form-scroll {
-      flex: 1;
-      overflow-y: auto;
-      padding: 0 20px;
-      display: flex;
-      flex-direction: column;
-    }
-    #form-scroll::-webkit-scrollbar {
-      display: none;
-    }
-
+    #form-scroll { flex: 1; overflow-y: auto; padding: 0 20px; display: flex; flex-direction: column; }
+    #form-scroll::-webkit-scrollbar { display: none; }
     /* Welcome micro text */
-    #form-greeting {
-      margin-bottom: 18px;
-    }
-    #form-greeting-eyebrow {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 3px;
-    }
-    #form-greeting-title {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--foreground);
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-    }
-
+    #form-greeting { margin-bottom: 18px; font-family: var(--font-family-body); }
+    #form-greeting-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
+    #form-greeting-title { font-size: 20px; font-weight: 800; color: var(--foreground); letter-spacing: -0.03em; line-height: 1.2; }
     /* Input stacks */
-    .input-row {
-      display: flex;
-      gap: 10px;
-    }
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-bottom: 12px;
-    }
-    .form-group.half {
-      flex: 1;
-    }
-    .fgroup-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--secondary-foreground);
-    }
-    .fgroup-input {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--card);
-      border-radius: var(--radius-md);
-      padding: 13px 13px;
-      border: 1.5px solid var(--border);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-    }
-    .fgroup-input.focused {
-      border-color: var(--accent);
-      box-shadow:
-        0 0 0 3px rgba(201, 169, 110, 0.1),
-        0 1px 3px rgba(0, 0, 0, 0.04);
-    }
-    .finput-icon {
-      width: 15px;
-      height: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .finput-action {
-      width: 18px;
-      height: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .finput-text {
-      flex: 1;
-      font-size: 13px;
-      color: var(--muted-foreground);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .finput-text input {
-      width: 100%;
-      border: 0;
-      outline: 0;
-      background: transparent;
-      padding: 0;
-      margin: 0;
-      font: inherit;
-      color: var(--foreground);
-      font-weight: 500;
-    }
-    .finput-text input::placeholder {
-      color: var(--muted-foreground);
-      opacity: 1;
-    }
-    .finput-text input:focus {
-      outline: none;
-    }
-    /* .finput-text.typed {
-      color: var(--foreground);
-      font-weight: 500;
-    } */
-    /* .finput-action {
-      width: 15px;
-      height: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    } */
-    .fgroup-hint {
-      font-size: 10px;
-      color: var(--muted-foreground);
-      line-height: 1.4;
-    }
+    .input-row { display: flex; gap: 10px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; font-family: var(--font-family-body); }
+    .form-group.half { flex: 1; }
+    .fgroup-label { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--secondary-foreground); }
+    .fgroup-input { display: flex; align-items: center; gap: 10px; background: var(--card); border-radius: var(--radius-md); padding: 13px 13px; border: 1.5px solid var(--border); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); }
+    .fgroup-input.focused { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1), 0 1px 3px rgba(0, 0, 0, 0.04); }
+    .finput-icon { width: 15px; height: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .finput-action { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .finput-text { flex: 1; font-size: 13px; min-width: 0; color: var(--muted-foreground); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .finput-text input { width: 100%; border: 0; outline: 0; background: transparent; padding: 0; margin: 0; font: inherit; color: var(--foreground); font-weight: 500; }
+    .finput-text input::placeholder { color: var(--muted-foreground); opacity: 1; }
+    .finput-text input:focus { outline: none; }
     .signup-eye-container { display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer; font-size: 14px; user-select: none; fill: var(--muted-foreground)}
     .signup-eye-container .eye { position: absolute; animation: keyframes-fill .5s; }
     .signup-eye-container .eye-slash { position: absolute; animation: keyframes-fill .5s; display: none; }
@@ -772,224 +606,47 @@
       0% { transform: scale(0); opacity: 0; }
       50% { transform: scale(1.2); }
      }
+    .country-wrapper { position: relative; width: 100%; }
     /* Country select */
-    .country-wrapper {
-      position: relative;
-      width: 100%;
-    }
-    .country-select {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      width: 100%;
-      box-sizing: border-box;
-      background: var(--card);
-      border-radius: var(--radius-md);
-      padding: 11px 13px;
-      border: 1.5px solid var(--border);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-      cursor: pointer;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    .country-select:hover {
-      border-color: rgba(201, 169, 110, 0.7);
-    }
-    .country-select.open {
-      border-color: var(--accent);
-      box-shadow:
-        0 0 0 3px rgba(201, 169, 110, 0.1),
-        0 1px 3px rgba(0, 0, 0, 0.04);
-    }
-    .cs-flag {
-      font-size: 16px;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-    .cs-name {
-      flex: 1;
-      font-size: 13px;
-      min-width: 0;
-      font-weight: 500;
-      color: var(--foreground);
-    }
-    .cs-code {
-      font-size: 12px;
-      color: var(--muted-foreground);
-      flex-shrink: 0;
-    }
-    .cs-chev {
-      width: 13px;
-      height: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: transform 0.2s ease;
-    }
-    .country-select.open .cs-chev {
-      transform: rotate(180deg);
-    }
-    .country-dropdown {
-      position: absolute;
-      top: calc(100% + 6px);
-      left: 0;
-      width: 100%;
-      box-sizing: border-box;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.12),
-        0 3px 8px rgba(0, 0, 0, 0.06);
-      z-index: 9999;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-5px);
-      transition:
-        opacity 0.18s ease,
-        transform 0.18s ease,
-        visibility 0.18s ease;
-      overflow: hidden;
-    }
-    .country-dropdown.open {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
+    .country-select { display: flex; align-items: center; gap: 9px; width: 100%; box-sizing: border-box; background: var(--card); border-radius: var(--radius-md); padding: 11px 13px; border: 1.5px solid var(--border); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); cursor: pointer; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+    .country-select:hover { border-color: rgba(201, 169, 110, 0.7); }
+    .country-select.open { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1), 0 1px 3px rgba(0, 0, 0, 0.04); }
+    .cs-flag { font-size: 16px; line-height: 1; flex-shrink: 0; }
+    .cs-name { flex: 1; font-size: 13px; min-width: 0; font-weight: 500; color: var(--foreground); }
+    .cs-code { font-size: 12px; color: var(--muted-foreground); flex-shrink: 0; }
+    .cs-chev { width: 13px; height: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.2s ease; }
+    .country-select.open .cs-chev { transform: rotate(180deg); }
+    .country-dropdown { position: absolute; top: calc(100% + 6px); left: 0; width: 100%; box-sizing: border-box; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), 0 3px 8px rgba(0, 0, 0, 0.06); z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(-5px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease; overflow: hidden; }
+    .country-dropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
     /* Search */
-    .country-search {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 10px;
-      padding: 9px 10px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--muted-foreground);
-      background: var(--card);
-    }
-    .country-search:focus-within {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.08);
-    }
-    .country-search input {
-      width: 100%;
-      min-width: 0;
-      border: 0;
-      outline: 0;
-      background: transparent;
-      font-family: var(--font-family-body);
-      font-size: 12px;
-      color: var(--foreground);
-    }
-    .country-search input::placeholder {
-      color: var(--muted-foreground);
-    }
-    .country-list {
-      max-height: 290px;
-      overflow-y: auto;
-      padding: 0 5px 6px;
-    }
-
-    .country-list::-webkit-scrollbar {
-      width: 4px;
-    }
-
-    .country-list::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.12);
-      border-radius: 10px;
-    }
+    .country-search { display: flex; align-items: center; gap: 8px; margin: 10px; padding: 9px 10px; border: 1px solid var(--border); border-radius: 8px; color: var(--muted-foreground); background: var(--card); }
+    .country-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.08); }
+    .country-search input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; font-family: var(--font-family-body); font-size: 12px; color: var(--foreground); }
+    .country-search input::placeholder { color: var(--muted-foreground); }
+    .country-list { max-height: 290px; overflow-y: auto; padding: 0 5px 6px; }
+    .country-list::-webkit-scrollbar { width: 4px; }
+    .country-list::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); border-radius: 10px; }
     /* Section Title */
-    .country-section-title {
-      padding: 7px 10px 5px;
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      color: var(--accent);
-    }
-    .country-section-title.all-title {
-      margin-top: 4px;
-      border-top: 1px solid var(--border);
-      padding-top: 10px;
-    }
+    .country-section-title { padding: 7px 10px 5px; font-size: 8px; font-weight: 800; letter-spacing: 0.14em; color: var(--accent); }
+    .country-section-title.all-title { margin-top: 4px; border-top: 1px solid var(--border); padding-top: 10px; }
     /* Country Option */
-    .country-option {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-height: 38px;
-      padding: 7px 9px;
-      border-radius: 7px;
-      cursor: pointer;
-      transition:
-        background 0.15s ease,
-        color 0.15s ease;
-    }
-    .country-option:hover {
-      background: rgba(201, 169, 110, 0.07);
-    }
-    .country-option.selected {
-      background: rgba(201, 169, 110, 0.09);
-    }
+    .country-option { display: flex; align-items: center; gap: 10px; min-height: 38px; padding: 7px 9px; border-radius: 7px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+    .country-option:hover { background: rgba(201, 169, 110, 0.07); }
+    .country-option.selected { background: rgba(201, 169, 110, 0.09); }
     /* Flag */
-    .country-flag {
-      width: 20px;
-      font-size: 16px;
-      line-height: 1;
-      flex-shrink: 0;
-    }
+    .country-flag { width: 20px; font-size: 16px; line-height: 1; flex-shrink: 0; }
     /* Name */
-    .country-name {
-      flex: 1;
-      min-width: 0;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--foreground);
-    }
+    .country-name { flex: 1; min-width: 0; font-size: 12px; font-weight: 500; color: var(--foreground); }
     /* Radio */
-    .country-radio {
-      width: 15px;
-      height: 15px;
-      border: 1.5px solid var(--border);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .country-option.selected .country-radio {
-      border-color: var(--accent);
-    }
-    .radio-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: transparent;
-      transition: background 0.15s ease;
-    }
-    .country-option.selected .radio-dot {
-      background: var(--accent);
-    }
+    .country-radio { width: 15px; height: 15px; border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .country-option.selected .country-radio { border-color: var(--accent); }
+    .radio-dot { width: 7px; height: 7px; border-radius: 50%; background: transparent; transition: background 0.15s ease; }
+    .country-option.selected .radio-dot { background: var(--accent); }
     /* No Result */
-    .country-no-result {
-      padding: 18px 10px;
-      text-align: center;
-      font-size: 11px;
-      color: var(--muted-foreground);
-    }
+    .country-no-result { padding: 18px 10px; text-align: center; font-size: 11px; color: var(--muted-foreground); }
     /* Row: forgot password */
-    #forgot-row {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 18px;
-      margin-top: -4px;
-    }
-    #forgot-link {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--accent);
-      cursor: pointer;
-    }
+    #forgot-row { display: flex; justify-content: flex-end; margin-bottom: 18px; margin-top: -4px; }
+    #forgot-link { font-size: 12px; font-weight: 500; color: var(--accent); cursor: pointer; }
     /* CTA button — full dark with gold accent line */
     #Signin-btn { position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 16px 20px; background: var(--foreground); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: var(--radius-lg); cursor: pointer; margin-bottom: 14px; overflow: hidden; font-family: var(--font-family-body);}
     #Signin-btn-accent-line { position: absolute; bottom: 0; left: 20%; right: 20%; height: 2px; background: var(--accent); border-radius: 2px; }
@@ -1012,7 +669,6 @@
     .tf-item { display: flex; align-items: center; gap: 4px; }
     .tf-text { font-size: 9px; color: var(--muted-foreground); white-space: nowrap; }
   </style>
-
 </head>
 <body>
     <div id="indexpage">
@@ -1028,7 +684,7 @@
           <div id="topbar-logo-text">VELUX</div>
         </div>
         <div id="topbar-right">
-          <form class="input-search-bar">
+            <form class="input-search-bar">
                 <img src="stock/search_icon.png" alt="Searchbar" class="input-search-icon">
                 <input type="search" placeholder="Search Products" id="">
             </form>
@@ -1047,7 +703,6 @@
           alt="Hero"
           src="https://app.banani.co/image-fallback.png"
         />
-
         <!-- Float left: review pill -->
         <div id="hf-left">
           <div class="hfl-av">
@@ -1073,7 +728,6 @@
             <div id="hfl-sub">48K reviews</div>
           </div>
         </div>
-
         <!-- Float right: auth badge -->
         <div id="hf-right">
           <div id="hfr-icon">
@@ -1087,7 +741,6 @@
             <div id="hfr-sub">Every item certified</div>
           </div>
         </div>
-
         <div id="hero-overlay"></div>
         <div id="hero-content">
           <p id="hero-desc">
@@ -1114,7 +767,6 @@
           </div>
         </div>
       </section>
-
       <!-- TICKER -->
       <div id="ticker">
         <div class="tick-item">
@@ -1169,7 +821,6 @@
           </div>
         </div>
       </div>
-
       <!-- BRANDS -->
       <div id="brands-wrap">
         <div id="brands-lbl">Trusted Brands</div>
@@ -1181,7 +832,6 @@
         <div class="brand-nm">Obsidian Co.</div>
         <div class="brand-nm">Château Blanc</div>
       </div>
-
       <!-- CATEGORIES -->
       <section id="categories-section">
         <div class="sec-header">
@@ -1302,7 +952,6 @@
           </div>
         </div>
       </section>
-
       <!-- PRODUCTS -->
       <section id="products-section">
         <div class="sec-header" style="padding: 0 20px; margin-bottom: 14px">
@@ -1606,7 +1255,6 @@
           </div>
         </div>
       </section>
-
       <!-- EDITORIAL -->
       <section id="editorial-section">
         <div class="ed-block" data-media-type="banani-button">
@@ -1702,7 +1350,6 @@
           </div>
         </div>
       </section>
-
       <!-- AI SEARCH -->
       <section id="ai-section">
         <div id="ai-glow"></div>
@@ -1881,7 +1528,6 @@
           </div>
         </div>
       </section>
-
       <!-- TRUST BAR -->
       <div id="trust-bar">
         <div class="trust-item">
@@ -1933,7 +1579,6 @@
           </div>
         </div>
       </div>
-
       <!-- MEMBER SECTION -->
       <section id="member-section">
         <div id="member-img-wrap">
@@ -2035,7 +1680,6 @@
           ></iconify-icon>
         </div>
       </section>
-
       <!-- REVIEWS -->
       <section id="reviews-section">
         <div id="rev-top">
@@ -2230,7 +1874,6 @@
           </div>
         </div>
       </section>
-
       <!-- NEWSLETTER -->
       <section id="newsletter">
         <img
@@ -2279,7 +1922,6 @@
           </div>
         </div>
       </section>
-
       <!-- FOOTER -->
       <footer id="footer">
         <div id="footer-logo-row">
@@ -2352,10 +1994,9 @@
             <div class="pay-chip">Apple Pay</div>
             <div class="pay-chip">Crypto</div>
           </div>
-          <div id="footer-copy">© 2025 VELUX. All rights reserved.</div>
+          <div id="footer-copy">© 2028 VELUX. All rights reserved.</div>
         </div>
       </footer>
-
       <!-- BOTTOM NAV -->
       <div id="bottomnav">
         <div class="bnav-item active" data-media-type="banani-button">
@@ -2504,7 +2145,7 @@
         <div id="form-scroll">
           <div id="form-greeting">
             <div id="form-greeting-eyebrow">Welcome back</div>
-            <div id="form-greeting-title">Continue your experience</div>
+            <div id="form-greeting-title">Continue with Sign In</div>
           </div>
           <div class="form-group">
             <div class="fgroup-label">Country / Region</div>
@@ -2513,7 +2154,6 @@
                 <div class="cs-flag" id="selectedFlag">🇮🇳</div>
                 <div class="cs-name" id="selectedCountry">India</div>
                 <div class="cs-code" id="selectedCode">+91</div>
-
                 <div class="cs-chev" id="countryChevron">
                   <iconify-icon
                     icon="lucide:chevron-down"
@@ -2521,15 +2161,14 @@
                   ></iconify-icon>
                 </div>
               </div>
+              <!-- Country Dropdown -->
               <div class="country-dropdown" id="countryDropdown">
-
                 <!-- Search -->
                 <div class="country-search">
                   <iconify-icon
                     icon="lucide:search"
                     style="font-size: 15px;"
                   ></iconify-icon>
-
                   <input
                     type="text"
                     id="countrySearch"
@@ -2537,12 +2176,9 @@
                     autocomplete="off"
                   >
                 </div>
-
                 <!-- Countries -->
                 <div class="country-list" id="countryList">
-
                   <div class="country-section-title">POPULAR</div>
-
                   <div class="country-option selected"
                       data-country="India"
                       data-code="+91"
@@ -2553,7 +2189,6 @@
                       <span class="radio-dot"></span>
                     </span>
                   </div>
-
                   <div class="country-option"
                       data-country="United States"
                       data-code="+1"
@@ -2564,7 +2199,6 @@
                       <span class="radio-dot"></span>
                     </span>
                   </div>
-
                   <div class="country-option"
                       data-country="United Kingdom"
                       data-code="+44"
@@ -2575,7 +2209,6 @@
                       <span class="radio-dot"></span>
                     </span>
                   </div>
-
                   <div class="country-option"
                       data-country="United Arab Emirates"
                       data-code="+971"
@@ -2586,9 +2219,7 @@
                       <span class="radio-dot"></span>
                     </span>
                   </div>
-
                   <div class="country-section-title all-title">ALL COUNTRIES</div>
-
                   <div class="country-option"
                       data-country="Afghanistan"
                       data-code="+93"
@@ -2597,7 +2228,6 @@
                     <span class="country-name">Afghanistan</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Australia"
                       data-code="+61"
@@ -2606,7 +2236,6 @@
                     <span class="country-name">Australia</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Bangladesh"
                       data-code="+880"
@@ -2615,7 +2244,6 @@
                     <span class="country-name">Bangladesh</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Brazil"
                       data-code="+55"
@@ -2624,7 +2252,6 @@
                     <span class="country-name">Brazil</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Canada"
                       data-code="+1"
@@ -2633,7 +2260,6 @@
                     <span class="country-name">Canada</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="China"
                       data-code="+86"
@@ -2642,7 +2268,6 @@
                     <span class="country-name">China</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="France"
                       data-code="+33"
@@ -2651,7 +2276,6 @@
                     <span class="country-name">France</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Germany"
                       data-code="+49"
@@ -2660,7 +2284,6 @@
                     <span class="country-name">Germany</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Indonesia"
                       data-code="+62"
@@ -2669,7 +2292,6 @@
                     <span class="country-name">Indonesia</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Italy"
                       data-code="+39"
@@ -2678,7 +2300,6 @@
                     <span class="country-name">Italy</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Japan"
                       data-code="+81"
@@ -2687,7 +2308,6 @@
                     <span class="country-name">Japan</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Malaysia"
                       data-code="+60"
@@ -2696,7 +2316,6 @@
                     <span class="country-name">Malaysia</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Nepal"
                       data-code="+977"
@@ -2705,7 +2324,6 @@
                     <span class="country-name">Nepal</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="New Zealand"
                       data-code="+64"
@@ -2714,7 +2332,6 @@
                     <span class="country-name">New Zealand</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Pakistan"
                       data-code="+92"
@@ -2723,7 +2340,6 @@
                     <span class="country-name">Pakistan</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Russia"
                       data-code="+7"
@@ -2732,7 +2348,6 @@
                     <span class="country-name">Russia</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Saudi Arabia"
                       data-code="+966"
@@ -2741,7 +2356,6 @@
                     <span class="country-name">Saudi Arabia</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Singapore"
                       data-code="+65"
@@ -2750,7 +2364,6 @@
                     <span class="country-name">Singapore</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="South Africa"
                       data-code="+27"
@@ -2759,7 +2372,6 @@
                     <span class="country-name">South Africa</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="South Korea"
                       data-code="+82"
@@ -2768,7 +2380,6 @@
                     <span class="country-name">South Korea</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Spain"
                       data-code="+34"
@@ -2777,7 +2388,6 @@
                     <span class="country-name">Spain</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Sri Lanka"
                       data-code="+94"
@@ -2786,7 +2396,6 @@
                     <span class="country-name">Sri Lanka</span>
                     <span class="country-radio"><span class="radio-dot"></span></span>
                   </div>
-
                   <div class="country-option"
                       data-country="Thailand"
                       data-code="+66"
@@ -2840,7 +2449,7 @@
                 ></iconify-icon>
               </div>
               <div class="finput-text">
-                 <input
+                <input
                   type="text"
                   id="login-password"
                   name="password"
@@ -2863,13 +2472,13 @@
               Forgot Password?
             </div>
           </div>
-          <div id="cta-btn" data-media-type="banani-button">
+          <div id="Signin-btn">
             <iconify-icon
               icon="lucide:log-in"
               style="font-size: 15px; color: #fff"
             ></iconify-icon>
             Sign In
-            <div id="cta-btn-accent-line"></div>
+            <div id="Signin-btn-accent-line"></div>
           </div>
           <div id="or-row">
             <div class="or-line"></div>
@@ -2879,13 +2488,7 @@
           <div id="social-btns">
             <div class="soc-btn" data-media-type="banani-button">
               <div class="soc-icon">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" >
                   <path
                     d="M19.6 10.23c0-.68-.06-1.36-.18-2H10v3.79h5.39a4.61 4.61 0 01-2 3.02v2.51h3.23c1.89-1.74 2.98-4.3 2.98-7.32z"
                     fill="#4285F4"
@@ -2908,13 +2511,7 @@
             </div>
             <div class="soc-btn" data-media-type="banani-button">
               <div class="soc-icon">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="var(--foreground)"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--foreground)" xmlns="http://www.w3.org/2000/svg" >
                   <path
                     d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
                   ></path>
