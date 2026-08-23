@@ -162,6 +162,25 @@
             .bottom-navbar { display: none; }
         }
     </style>
+    <style id="categories-styles">
+        #categories-section { padding: 28px 0 24px; background: var(--background); }
+        .sec-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+        .sec-title { font-size: 24px; font-weight: 800; color: var(--foreground); letter-spacing: -0.03em; line-height: 1.1; }
+        .sec-title .thin { font-weight: 200; font-style: italic; }
+        .sec-header { display: flex; align-items: flex-end; justify-content: space-between; padding: 0 20px; margin-bottom: 16px; }
+        .view-all-btn { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; color: var(--secondary-foreground); cursor: pointer; white-space: nowrap; padding: 6px 12px; border-radius: 100px; background: var(--secondary); }
+        #cat-scroll { display: flex; gap: 10px; padding: 0 20px; overflow-x: auto; }
+        #cat-scroll::-webkit-scrollbar { display: none; }
+        .cat-card { border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; flex-shrink: 0; width: 140px; height: 190px; }
+        .cat-card.wide { width: 200px; }
+        .cat-card img { width: 100%; height: 100%; object-fit: cover; }
+        .cat-ov { position: absolute; inset: 0; background: linear-gradient( to top, rgba(0, 0, 0, 0.75) 0%, transparent 55% ); }
+        .cat-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 12px; }
+        .cat-micro { font-size: 7px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+        .cat-name { font-size: 13px; font-weight: 700; color: #fff; }
+        .cat-count { font-size: 9px; color: rgba(255, 255, 255, 0.5); margin-top: 1px; }
+        .cat-arr { position: absolute; top: 8px; right: 8px; width: 24px; height: 24px; background: rgba(255, 255, 255, 0.14); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+      </style>
 </head>
 <body>
     <div class="Notification" style="display: none;">
