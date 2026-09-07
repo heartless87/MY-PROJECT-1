@@ -65,3 +65,130 @@
           color: inherit;
         }
       </style>
+      <style id="profile-hero-styles">
+        #profile-hero {
+          background: var(--primary);
+          padding: 28px 20px 0 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+        }
+        #profile-hero-bg-accent {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(
+            ellipse at 80% 0%,
+            rgba(201, 168, 76, 0.13) 0%,
+            transparent 65%
+          );
+          pointer-events: none;
+        }
+        #profile-pic-wrap {
+          position: relative;
+          width: 88px;
+          height: 88px;
+          margin-bottom: 14px;
+          z-index: 1;
+        }
+        #profile-pic {
+          width: 88px;
+          height: 88px;
+          border-radius: 50%;
+          object-fit: cover;
+          display: block;
+          border: 3px solid rgba(255, 255, 255, 0.18);
+          box-shadow:
+            0 0 0 3px rgba(201, 168, 76, 0.45),
+            0 8px 28px rgba(0, 0, 0, 0.32);
+        }
+        #edit-pic-btn {
+          position: absolute;
+          bottom: 1px;
+          right: 1px;
+          width: 28px;
+          height: 28px;
+          background: var(--accent);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2.5px solid var(--primary);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+          cursor: pointer;
+          z-index: 2;
+        }
+        #profile-name {
+          font-size: 20px;
+          font-weight: 800;
+          color: #ffffff;
+          letter-spacing: -0.02em;
+          margin-bottom: 3px;
+          z-index: 1;
+        }
+        #profile-handle {
+          font-size: 12.5px;
+          font-weight: 600;
+          color: var(--accent);
+          letter-spacing: 0.07em;
+          margin-bottom: 12px;
+          z-index: 1;
+        }
+        #profile-contact-row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          margin-bottom: 18px;
+          z-index: 1;
+        }
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 11.5px;
+          color: rgba(255, 255, 255, 0.56);
+        }
+        #membership-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          background: rgba(201, 168, 76, 0.14);
+          border: 1px solid rgba(201, 168, 76, 0.32);
+          border-radius: var(--radius-xl);
+          padding: 6px 14px 6px 8px;
+          margin-bottom: 24px;
+          z-index: 1;
+        }
+        .mp-icon {
+          width: 24px;
+          height: 24px;
+          background: rgba(201, 168, 76, 0.22);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .mp-tier {
+          font-size: 12.5px;
+          font-weight: 700;
+          color: var(--accent);
+        }
+        .mp-pts {
+          font-size: 10.5px;
+          color: rgba(255, 255, 255, 0.45);
+        }
+        /* Bottom wave cutout */
+        #profile-hero-wave {
+          width: 100%;
+          height: 20px;
+          background: var(--background);
+          border-radius: 20px 20px 0 0;
+          margin-top: 0;
+          z-index: 1;
+        }
+      </style>
