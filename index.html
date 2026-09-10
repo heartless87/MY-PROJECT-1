@@ -50,10 +50,10 @@
             object-fit: contain;
             background: transparent;
         }
-        .search-bar{ display: none; }
+        .header-search-bar{ display: none; }
         .search-mobile{ display: flex; }
         @media (min-width: 1024px) {
-            .search-bar{ 
+            . header-search-bar{ 
                 display: flex;
                 align-items: center;
                 background-color: #f4e3cf;
@@ -70,7 +70,7 @@
                 flex-shrink: 0;
                 background: transparent;
             }
-            .search-bar input{
+            . header-search-bar input{
                 flex: 1;
                 background: transparent;
                 border: none;
@@ -185,11 +185,11 @@
         <h6>X</h6>
     </div>
     <header>
-        <a class="logo" href="/">
+        <a class="header-logo" href="/">
             <img src="logo.png" alt="Logo">
         </a>
         <div class="header-right">
-            <form class="search-bar">
+            <form class="header-search-bar">
                 <img src="stock/search_icon.png" alt="Searchbar" class="search-icon">
                 <input type="search" placeholder="Search Products" id="">
             </form>
