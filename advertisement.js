@@ -53,10 +53,10 @@ document.head.appendChild(style);
 // ==========================================
 
 const adImages = [
-    "dummyad1.png",
-    "dummyad2.png",
-    "dummyad3.png",
-    "dummyad4.png"
+    "dummyad1.jpg",
+    "dummyad2.jpg",
+    "dummyad3.jpeg",
+    "dummyad4.jpeg"
 ];
 
 
