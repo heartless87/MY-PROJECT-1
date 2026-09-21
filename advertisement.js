@@ -46,24 +46,12 @@ const adBannerCSS = `
 const style = document.createElement("style");
 style.textContent = adBannerCSS;
 document.head.appendChild(style);
-
-
-// ==========================================
-// AD IMAGES
-// ==========================================
-
 const adImages = [
-    "/stock/dummyad1.jpg",
-    "/stock/dummyad2.jpg",
-    "/stock/dummyad3.jpeg",
-    "/stock/dummyad4.jpeg"
+    "stock/dummyad1.jpg",
+    "stock/dummyad2.jpg",
+    "stock/dummyad3.jpeg",
+    "stock/dummyad4.jpeg"
 ];
-
-
-// ==========================================
-// CREATE SLIDES
-// ==========================================
-
 const slidesHTML = adImages.map((image, index) => `
     <div class="ad-banner-slide">
         <img
@@ -73,12 +61,6 @@ const slidesHTML = adImages.map((image, index) => `
         >
     </div>
 `).join("");
-
-
-// ==========================================
-// AD BANNER HTML
-// ==========================================
-
 const adBannerHTML = `
 <section class="ad-banner">
     <div class="ad-banner-track">
