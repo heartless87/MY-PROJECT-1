@@ -1,173 +1,192 @@
-const adBannerCSS = `
-.ad-banner {
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    background: #f4e3cf;
-    touch-action: pan-y;
-    user-select: none;
-}
-.ad-banner-track {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    transition: transform 0.35s ease;
-    will-change: transform;
-}
-
-.ad-banner-slide {
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    flex-shrink: 0;
-}
-
-.ad-banner-slide img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    margin: 0;
-    padding: 0;
-    pointer-events: none;
-    user-select: none;
-}
-`;
-
 // ==========================================
-// ADD CSS
+// 2:1 RESPONSIVE SWIPEABLE AD BANNER
 // ==========================================
 
-const style = document.createElement("style");
-style.textContent = adBannerCSS;
-document.head.appendChild(style);
-const adImages = [
-    "stock/dummyad1.jpg",
-    "stock/dummyad2.jpg",
-    "stock/dummyad3.jpeg",
-    "stock/dummyad4.jpeg"
-];
-const slidesHTML = adImages.map((image, index) => `
-    <div class="ad-banner-slide">
-        <img
-            src="${image}"
-            alt="Advertisement ${index + 1}"
-            draggable="false"
-        >
-    </div>
-`).join("");
-const adBannerHTML = `
-<section class="ad-banner">
-    <div class="ad-banner-track">
-        ${slidesHTML}
-    </div>
-</section>
-`;
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ==========================================
+    // CSS
+    // ==========================================
+
+    const adBannerCSS = `
+        .ad-banner {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2 / 1;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f4e3cf;
+            touch-action: pan-y;
+            user-select: none;
+        }
+
+        .ad-banner-track {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.35s ease;
+            will-change: transform;
+        }
+
+        .ad-banner-slide {
+            width: 100%;
+            height: 100%;
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+
+        .ad-banner-slide img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            pointer-events: none;
+            user-select: none;
+        }
+    `;
+
+    const style = document.createElement("style");
+    style.textContent = adBannerCSS;
+    document.head.appendChild(style);
 
 
-// ==========================================
-// INSERT AFTER HEADER
-// ==========================================
+    // ==========================================
+    // AD IMAGES
+    // ==========================================
 
-const header = document.querySelector("header");
-
-if (header) {
-    header.insertAdjacentHTML("afterend", adBannerHTML);
-} else {
-    document.body.insertAdjacentHTML("afterbegin", adBannerHTML);
-}
-
-
-// ==========================================
-// CAROUSEL FUNCTIONALITY
-// ==========================================
-
-const banner = document.querySelector(".ad-banner");
-const track = document.querySelector(".ad-banner-track");
-
-let currentSlide = 0;
-
-let startX = 0;
-let currentX = 0;
-let isDragging = false;
+    const adImages = [
+        "stock/dummyad1.jpg",
+        "stock/dummyad2.jpg",
+        "stock/dummyad3.jpeg",
+        "stock/dummyad4.jpeg"
+    ];
 
 
-// ==========================================
-// CHANGE IMAGE
-// ==========================================
+    // ==========================================
+    // CREATE SLIDES
+    // ==========================================
 
-function changeSlide(direction) {
+    const slidesHTML = adImages.map((image, index) => `
+        <div class="ad-banner-slide">
+            <img
+                src="${image}"
+                alt="Advertisement ${index + 1}"
+                draggable="false"
+            >
+        </div>
+    `).join("");
 
-    currentSlide += direction;
 
-    // First image ke baad last image
-    if (currentSlide < 0) {
-        currentSlide = adImages.length - 1;
+    // ==========================================
+    // CREATE BANNER
+    // ==========================================
+
+    const adBannerHTML = `
+        <section class="ad-banner">
+            <div class="ad-banner-track">
+                ${slidesHTML}
+            </div>
+        </section>
+    `;
+
+
+    // ==========================================
+    // INSERT AFTER HEADER
+    // ==========================================
+
+    const header = document.querySelector("header");
+
+    if (header) {
+
+        header.insertAdjacentHTML(
+            "afterend",
+            adBannerHTML
+        );
+
+    } else {
+
+        document.body.insertAdjacentHTML(
+            "afterbegin",
+            adBannerHTML
+        );
+
     }
 
-    // Last image ke baad first image
-    if (currentSlide >= adImages.length) {
-        currentSlide = 0;
+
+    // ==========================================
+    // GET ELEMENTS
+    // ==========================================
+
+    const banner = document.querySelector(".ad-banner");
+    const track = document.querySelector(".ad-banner-track");
+
+
+    // ==========================================
+    // SLIDE SYSTEM
+    // ==========================================
+
+    let currentSlide = 0;
+
+    function changeSlide(direction) {
+
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = adImages.length - 1;
+        }
+
+        if (currentSlide >= adImages.length) {
+            currentSlide = 0;
+        }
+
+        track.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
     }
 
-    track.style.transform =
-        `translateX(-${currentSlide * 100}%)`;
-}
+
+    // ==========================================
+    // TOUCH / SWIPE
+    // ==========================================
+
+    let startX = 0;
+    let currentX = 0;
+
+    banner.addEventListener("touchstart", function (event) {
+
+        startX = event.touches[0].clientX;
+        currentX = startX;
+
+    }, { passive: true });
 
 
-// ==========================================
-// TOUCH START
-// ==========================================
+    banner.addEventListener("touchmove", function (event) {
 
-banner.addEventListener("touchstart", function(event) {
+        currentX = event.touches[0].clientX;
 
-    startX = event.touches[0].clientX;
-    currentX = startX;
-    isDragging = true;
-
-}, { passive: true });
+    }, { passive: true });
 
 
-// ==========================================
-// TOUCH MOVE
-// ==========================================
+    banner.addEventListener("touchend", function () {
 
-banner.addEventListener("touchmove", function(event) {
+        const distance = currentX - startX;
 
-    if (!isDragging) return;
+        const swipeThreshold = 50;
 
-    currentX = event.touches[0].clientX;
+        // Left → Right
+        if (distance > swipeThreshold) {
+            changeSlide(-1);
+        }
 
-}, { passive: true });
+        // Right → Left
+        else if (distance < -swipeThreshold) {
+            changeSlide(1);
+        }
 
+    });
 
-// ==========================================
-// TOUCH END
-// ==========================================
-
-banner.addEventListener("touchend", function() {
-
-    if (!isDragging) return;
-
-    const distance = currentX - startX;
-
-    const swipeThreshold = 50;
-
-    // Right swipe
-    if (distance > swipeThreshold) {
-        changeSlide(-1);
-    }
-
-    // Left swipe
-    else if (distance < -swipeThreshold) {
-        changeSlide(1);
-    }
-
-    isDragging = false;
 
 });
