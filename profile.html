@@ -459,6 +459,29 @@
           border-radius: 50%;
         }
       </style>
+       <style id="page-footer-space">
+        #page-content {
+          display: flex;
+          flex-direction: column;
+          min-height: 812px;
+        }
+        #scrollable-area {
+          flex: 1;
+          overflow: visible;
+        }
+        #signout-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 16px 0 16px;
+          cursor: pointer;
+        }
+        #signout-label {
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--muted-foreground);
+        }
+      </style>
       <div id="scrollable-area">
           <!-- PROFILE HERO -->
           <div id="profile-hero">
