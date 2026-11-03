@@ -1,4 +1,4 @@
-const headerCSS = `
+const bottomnavCSS = `
         .bottom-navbar{
             position: fixed;
             bottom: 0;
@@ -76,7 +76,7 @@ const headerCSS = `
         }
         `;
 const style = document.createElement("style");
-style.textContent = headerCSS;
+style.textContent = bottomnavCSS;
 document.head.appendChild(style);
 
 const bottomnavHTML = `
@@ -95,4 +95,4 @@ const bottomnavHTML = `
             <span>Profile</span></a>
     </nav>
     `;
-document.body.insertAdjacentHTML("afterbegin", headerHTML);
+document.body.insertAdjacentHTML("afterbegin", bottomnavHTML);
