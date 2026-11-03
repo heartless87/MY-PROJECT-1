@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 const bottomnavHTML = `
 <nav class="bottom-navbar" aria-level="Main Navigation">
-        <a href="/" class="nav-item home-btn"><img src="stock/home.png" alt="Home" style=" filter: brightness(0) saturate(100%) invert(10%) sepia(48%) saturate(2700%) hue-rotate(245deg) brightness(75%) contrast(115%);">
+        <a href="index.html" class="nav-item home-btn"><img src="stock/home.png" alt="Home" style=" filter: brightness(0) saturate(100%) invert(10%) sepia(48%) saturate(2700%) hue-rotate(245deg) brightness(75%) contrast(115%);">
             <span>Home</span></a>
         <a href="/" class="nav-item wishlist-btn"><img src="stock/heart.png" alt="Wishlist">
             <span>Wishlist</span></a>
