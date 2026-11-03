@@ -75,10 +75,13 @@ const bottomnavCSS = `
             .bottom-navbar { display: none; }
         }
         `;
-const style = document.createElement("style");
-style.textContent = bottomnavCSS;
-document.head.appendChild(style);
+document.addEventListener("DOMContentLoaded", () => {
+    const style = document.createElement("style");
+    style.textContent = bottomnavCSS;
+    document.head.appendChild(style);
 
+    document.body.insertAdjacentHTML("afterbegin", bottomnavHTML);
+});
 const bottomnavHTML = `
 <nav class="bottom-navbar" aria-level="Main Navigation">
         <a href="/" class="nav-item home-btn"><img src="stock/home.png" alt="Home" style=" filter: brightness(0) saturate(100%) invert(10%) sepia(48%) saturate(2700%) hue-rotate(245deg) brightness(75%) contrast(115%);">
